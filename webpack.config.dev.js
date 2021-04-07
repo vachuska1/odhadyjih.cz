@@ -19,15 +19,6 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                loader: 'string-replace-loader',
-                options: {
-                    search: './src/API/',
-                    replace: 'http://localhost:8000/own_projects/personal/www.salonchiquita.cz/src/API/',
-                    flags: 'g'
-                }
-            },
-            {
-                test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
@@ -73,13 +64,13 @@ module.exports = {
         },
     },
     plugins: [
-        new PrettierPlugin(),
         new CopyPlugin({
             patterns: [
-                { from: 'src/API', to: 'src/API' },
+                // { from: 'src/API', to: 'src/API' },
                 { from: 'src/images', to: 'src/images' },
             ],
         }),
+        new PrettierPlugin(),
         new HtmlWebpackPlugin(
             {
                 'template': './src/index.html',
