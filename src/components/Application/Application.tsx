@@ -2,7 +2,7 @@ import * as React from "react";
 import { Menu } from "./Menu/Menu";
 import { PhotoGallery } from "./PhotoGallery/PhotoGallery";
 import { TextWindow } from "./TextWindow/TextWindow";
-import { Map } from "./Map/Map";
+import { MapWindow } from "./Map/MapWindow";
 import { Footer } from "./Footer/Footer";
 
 export const Application = () => {
@@ -11,7 +11,7 @@ export const Application = () => {
 			<Menu />
 			<PhotoGallery />
 			<TextWindow />
-			<Map />
+			<MapWindow />
 			<Footer />
 		</>
 	);
