@@ -134,6 +134,7 @@
 	}
 	&__messageTextCont {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		max-width: 600px;
@@ -143,8 +144,18 @@
 		box-sizing: border-box;
 	}
 	&__messageText {
+		margin-bottom: 10px;
 		font-size: 24px;
 		text-align: center;
+	}
+	&__messageLoading {
+		width: 100px;
+		height: 100px;
+		border-style: solid;
+		border-width: 4px;
+		border-color: var(--border-color-1) transparent transparent transparent;
+		border-radius: 50%;
+		animation: loadingSpinner 0.8s linear forwards infinite;
 	}
 	@media only screen and (max-width: @breakpoint-desktop) {
 		margin-top: 240px;

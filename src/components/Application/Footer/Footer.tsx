@@ -69,14 +69,25 @@ export const Footer = () => {
 			.then((response) => response.json())
 			.then((result) => {
 				setLoading(false);
-				// setSend(true);
-				console.log(result);
 				if (result === 1) {
 					setSuccessfulSend(true);
 				} else {
 					setSuccessfulSend(false);
 				}
 			});
+	};
+
+	const finishForm = () => {
+		setName("");
+		setEmail("");
+		setMessage("");
+		setSend(false);
+		setSuccessfulSend(false);
+	};
+
+	const finishFormToContinue = () => {
+		setSend(false);
+		setSuccessfulSend(false);
 	};
 
 	return (
@@ -131,11 +142,18 @@ export const Footer = () => {
 						</button>
 					</form>
 					{send ? (
-						successfulSend ? (
+						loading ? (
+							<div className={"footer__messageBody"}>
+								<div className={"footer__messageLoading"} />
+							</div>
+						) : successfulSend ? (
 							<div className="footer__messageBody">
 								<div className="footer__messageTextCont">
 									<div className="footer__messageText">
-										Formulář byl úspěšně odeslán. Počkejte až Vás majitel kontaktuje.
+										Formulář byl úspěšně odeslán. Vyčkejte prosím než Vás majitel kontaktuje.
+									</div>
+									<div className="footer__button" onClick={finishForm}>
+										pokračovat
 									</div>
 								</div>
 							</div>
@@ -144,6 +162,9 @@ export const Footer = () => {
 								<div className="footer__messageTextCont">
 									<div className="footer__messageText">
 										Formulář se nepodařilo odeslat. Zkuste to prosím za pár minut.
+									</div>
+									<div className="footer__button" onClick={finishFormToContinue}>
+										pokračovat
 									</div>
 								</div>
 							</div>
