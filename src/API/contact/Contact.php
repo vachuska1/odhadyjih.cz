@@ -25,4 +25,4 @@ $message = $json["message"];
 //    echo json_encode(0);
 //}
 
-echo json_encode(1);
+echo json_encode(0);

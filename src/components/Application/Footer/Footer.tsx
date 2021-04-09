@@ -17,6 +17,7 @@ export const Footer = () => {
 	useEffect(() => {
 		if (validate) {
 			setLoading(true);
+			setSend(true);
 			sendForm();
 		}
 	}, [validate]);
@@ -27,14 +28,20 @@ export const Footer = () => {
 		if (name === "") {
 			validation = false;
 			setNameError("K pokračování je nutné vyplnit jméno");
+		} else {
+			setNameError("");
 		}
 		if (email === "" || !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
 			validation = false;
 			setEmailError("K pokračování je nutné zadat emailovou adresu ve správném formátu");
+		} else {
+			setEmailError("");
 		}
 		if (message === "") {
 			validation = false;
 			setMessageError("Vyplňte prosím s čím Vám můžeme pomoci.");
+		} else {
+			setMessageError("");
 		}
 		if (validation) {
 			setValidate(true);
@@ -47,7 +54,7 @@ export const Footer = () => {
 	};
 
 	const sendForm = () => {
-		fetch("./src/API/contact/Contact.php", {
+		fetch("./API/contact/Contact.php", {
 			method: "POST",
 			headers: {
 				Accept: "application/json",
@@ -64,11 +71,11 @@ export const Footer = () => {
 				setLoading(false);
 				// setSend(true);
 				console.log(result);
-				// if (result === 1) {
-				//     setSuccessfulSend(true);
-				// } else {
-				//     setSuccessfulSend(false);
-				// }
+				if (result === 1) {
+					setSuccessfulSend(true);
+				} else {
+					setSuccessfulSend(false);
+				}
 			});
 	};
 
@@ -123,25 +130,27 @@ export const Footer = () => {
 							Odeslat dotaz
 						</button>
 					</form>
+					{send ? (
+						successfulSend ? (
+							<div className="footer__messageBody">
+								<div className="footer__messageTextCont">
+									<div className="footer__messageText">
+										Formulář byl úspěšně odeslán. Počkejte až Vás majitel kontaktuje.
+									</div>
+								</div>
+							</div>
+						) : (
+							<div className="footer__messageBody">
+								<div className="footer__messageTextCont">
+									<div className="footer__messageText">
+										Formulář se nepodařilo odeslat. Zkuste to prosím za pár minut.
+									</div>
+								</div>
+							</div>
+						)
+					) : null}
 				</div>
 			</div>
-			{send ? (
-				successfulSend ? (
-					<div className="footer__messageBody">
-						<div className="footer__messageTextCont">
-							<div className="footer__messageText">
-								Formulář byl úspěšně odeslán, počkejte prosím na přesměrování na hlavní stánku.
-							</div>
-						</div>
-					</div>
-				) : (
-					<div className="footer__messageBody">
-						<div className="footer__messageTextCont">
-							<div className="footer__messageText">Formulář se nepodařilo odeslat.</div>
-						</div>
-					</div>
-				)
-			) : null}
 			<div className="footer__sentence">
 				<div className="footer__sentence--logo" />
 				Copyright © 2021 ApartmanyKratka.cz
