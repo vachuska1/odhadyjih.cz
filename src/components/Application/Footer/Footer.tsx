@@ -96,8 +96,13 @@ export const Footer = () => {
 			<div className="footer__cont">
 				<div className="footer__contArea">
 					<div className="footer__headName">Provozovatel:</div>
+					<div className="footer__text">Petr Buschbaum</div>
+					<div className="footer__text">IČO: 66383790</div>
+					<div className="footer__text">DIČ: CZ7612302247</div>
+					<div className="footer__headName">Kontaktní osoba:</div>
 					<div className="footer__text">Andrea Buschbaumová</div>
-					<div className="footer__text">...</div>
+					<div className="footer__text">+420 776 640 479</div>
+					<div className="footer__text">IČO: 02170779</div>
 					<div className="footer__headName">Sociální sítě:</div>
 					<div className="footer__social">
 						<a href="https://www.instagram.com/salon_chiquita_plzen/" target="_blank">
@@ -105,8 +110,7 @@ export const Footer = () => {
 						</a>
 					</div>
 					<div className="footer__headName">Najdete nás:</div>
-					<div className="footer__text">adrea v Sušici</div>
-					<div className="footer__text">Sušice, 34200</div>
+					<div className="footer__text">Krátká 7, Sušice 34201, Sušice III</div>
 				</div>
 				<div className="footer__contArea">
 					<div className="footer__headName footer__headName--padding">Kontaktujte nás:</div>
