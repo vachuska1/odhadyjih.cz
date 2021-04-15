@@ -21,7 +21,8 @@
 		letter-spacing: 3px;
 		color: var(--text-color-3);
 	}
-	&__mobile {
+	&__mobile,
+	&__lang {
 		display: none;
 	}
 	&__right {
@@ -59,7 +60,7 @@
 			width: 100%;
 			display: grid;
 			grid-template:
-				". logo menu" 80px /
+				"lang logo menu" 80px /
 				60px 1fr 60px;
 			align-items: center;
 		}
@@ -72,6 +73,7 @@
 			display: flex;
 			width: 30px;
 			height: 30px;
+			margin: 0 20px 0 auto;
 			background: url("../../../images/icons/mobile.svg") no-repeat center top/40px;
 			cursor: pointer;
 			&--open {
@@ -79,6 +81,22 @@
 			}
 			&--close {
 				animation: menuOpen 0.3s forwards;
+			}
+		}
+		&__lang {
+			grid-area: lang;
+			display: flex;
+			width: 30px;
+			height: 30px;
+			margin: 0 auto 0 20px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 30px;
+			&--cs {
+				background-image: url("../../../images/icons/cs.svg");
+			}
+			&--en {
+				background-image: url("../../../images/icons/en.svg");
 			}
 		}
 		&__right {
@@ -98,6 +116,9 @@
 			transition-duration: 0.3s;
 			&:hover {
 				letter-spacing: 2px;
+			}
+			&--lang {
+				display: none;
 			}
 		}
 	}

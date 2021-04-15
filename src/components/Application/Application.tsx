@@ -7,11 +7,18 @@ import { MapWindow } from "./Map/MapWindow";
 import { Footer } from "./Footer/Footer";
 
 export const Application = () => {
-	const [lang, setLang] = useState("cs");
+	const [lang, setLang] = useState(
+		localStorage.getItem("lang") === null ? "cs" : localStorage.getItem("lang")!.toString(),
+	);
+
+	const changeLang = (event) => {
+		setLang(event);
+		localStorage.setItem("lang", event.toString());
+	};
 
 	return (
 		<>
-			<Menu lang={lang} changeLang={(event) => setLang(event)} />
+			<Menu lang={lang} changeLang={(event) => changeLang(event)} />
 			<PhotoGallery />
 			<TextWindow lang={lang} />
 			<MapWindow />
