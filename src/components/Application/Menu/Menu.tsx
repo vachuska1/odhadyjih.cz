@@ -1,7 +1,12 @@
 import * as React from "react";
 import "./Menu.less";
 
-export const Menu = () => {
+interface MenuProps {
+	lang: string;
+	changeLang: (lang) => void;
+}
+
+export const Menu: React.FC<MenuProps> = (props) => {
 	const scrollToPosition = (topPosition: number, offsetAnimation: number) => {
 		const actualPosition = topPosition - offsetAnimation;
 		window.scrollTo({
@@ -96,7 +101,7 @@ export const Menu = () => {
 						handleSlidePart(1);
 					}}
 				>
-					Fotogalerie
+					{props.lang === "cs" ? "Fotogalerie" : "Photogallery"}
 				</div>
 				<div
 					className={"menu__element"}
@@ -104,7 +109,7 @@ export const Menu = () => {
 						handleSlidePart(2);
 					}}
 				>
-					Informace
+					{props.lang === "cs" ? "Informace" : "Information"}
 				</div>
 				<div
 					className={"menu__element"}
@@ -112,7 +117,7 @@ export const Menu = () => {
 						handleSlidePart(3);
 					}}
 				>
-					Mapa
+					{props.lang === "cs" ? "Mapa" : "Map"}
 				</div>
 				<div
 					className={"menu__element"}
@@ -120,8 +125,14 @@ export const Menu = () => {
 						handleSlidePart(4);
 					}}
 				>
-					Kontakt
+					{props.lang === "cs" ? "Kontakt" : "Contact"}
 				</div>
+				<div
+					className={`menu__element menu__element--lang ${
+						props.lang === "cs" ? "menu__element--lang-en" : "menu__element--lang-cs"
+					}`}
+					onClick={() => props.changeLang(props.lang === "cs" ? "en" : "cs")}
+				/>
 			</div>
 		</div>
 	);

@@ -36,6 +36,21 @@
 		letter-spacing: 1px;
 		color: var(--text-color-3);
 		cursor: pointer;
+		&--lang {
+			width: 30px;
+			height: 30px;
+			padding: 0;
+			margin-left: 30px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 30px;
+			&-cs {
+				background-image: url("../../../images/icons/cs.svg");
+			}
+			&-en {
+				background-image: url("../../../images/icons/en.svg");
+			}
+		}
 	}
 	@media only screen and (max-width: @breakpoint-menu) {
 		flex-direction: column;

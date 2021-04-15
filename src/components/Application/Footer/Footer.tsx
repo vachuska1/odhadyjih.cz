@@ -2,7 +2,11 @@ import * as React from "react";
 import { useEffect, useState } from "react";
 import "./Footer.less";
 
-export const Footer = () => {
+interface FooterProps {
+	lang: string;
+}
+
+export const Footer: React.FC<FooterProps> = (props) => {
 	const [name, setName] = useState<string>("");
 	const [nameError, setNameError] = useState<string>("");
 	const [email, setEmail] = useState<string>("");
@@ -27,19 +31,29 @@ export const Footer = () => {
 		let validation = true;
 		if (name === "") {
 			validation = false;
-			setNameError("K pokračování je nutné vyplnit jméno");
+			setNameError(
+				props.lang === "cs" ? "K pokračování je nutné vyplnit jméno" : "You must fill in the name to continue",
+			);
 		} else {
 			setNameError("");
 		}
 		if (email === "" || !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
 			validation = false;
-			setEmailError("K pokračování je nutné zadat emailovou adresu ve správném formátu");
+			setEmailError(
+				props.lang === "cs"
+					? "K pokračování je nutné zadat emailovou adresu ve správném formátu"
+					: "To continue, you must enter an email address in the correct format",
+			);
 		} else {
 			setEmailError("");
 		}
 		if (message === "") {
 			validation = false;
-			setMessageError("Vyplňte prosím s čím Vám můžeme pomoci.");
+			setMessageError(
+				props.lang === "cs"
+					? "Vyplňte prosím s čím Vám můžeme pomoci"
+					: "Please fill in what we can help you with",
+			);
 		} else {
 			setMessageError("");
 		}
@@ -92,33 +106,40 @@ export const Footer = () => {
 
 	return (
 		<div id="footer" className="footer">
-			<div className="footer__heading">Apartmány Krátká</div>
+			<div className="footer__heading">{props.lang === "cs" ? "Apartmány Krátká" : "Apartments Krátká"}</div>
 			<div className="footer__cont">
 				<div className="footer__contArea">
-					<div className="footer__headName">Provozovatel:</div>
+					<div className="footer__headName">{props.lang === "cs" ? "Provozovatel:" : "Operator:"}</div>
 					<div className="footer__text">Petr Buschbaum</div>
 					<div className="footer__text">IČO: 66383790</div>
 					<div className="footer__text">DIČ: CZ7612302247</div>
-					<div className="footer__headName">Kontaktní osoba:</div>
+					<div className="footer__headName">
+						{props.lang === "cs" ? "Kontaktní osoba:" : "Contact person:"}
+					</div>
 					<div className="footer__text">Andrea Buschbaumová</div>
 					<div className="footer__text">+420 776 640 479</div>
 					<div className="footer__text">IČO: 02170779</div>
-					<div className="footer__headName">Sociální sítě:</div>
+					<div className="footer__headName">{props.lang === "cs" ? "Sociální sítě" : "Social sites"}</div>
 					<div className="footer__social">
-						<a href="https://www.instagram.com/salon_chiquita_plzen/" target="_blank">
-							<div className="footer__socialIcon footer__socialIcon--instagram" />
+						<a href="https://www.apartmanykratka.cz" target="_blank">
+							<div className="footer__socialIcon footer__socialIcon--fb" />
+						</a>
+						<a href="https://www.apartmanykratka.cz" target="_blank">
+							<div className="footer__socialIcon footer__socialIcon--ig" />
 						</a>
 					</div>
-					<div className="footer__headName">Najdete nás:</div>
+					<div className="footer__headName">{props.lang === "cs" ? "Najdete nás:" : "You can find us:"}</div>
 					<div className="footer__text">Krátká 7, Sušice 34201, Sušice III</div>
 				</div>
 				<div className="footer__contArea">
-					<div className="footer__headName footer__headName--padding">Kontaktujte nás:</div>
+					<div className="footer__headName footer__headName--padding">
+						{props.lang === "cs" ? "Kontaktujte nás:" : "Contact us:"}
+					</div>
 					<form className="footer__form">
 						<input
 							id="footer-name"
 							type="text"
-							placeholder="Vaše jméno"
+							placeholder={props.lang === "cs" ? "Vaše jméno" : "Your name"}
 							className={`footer__input ${nameError.length ? "footer__input--false" : ""}`}
 							onChange={(event) => setName(event.target.value)}
 							value={name}
@@ -127,7 +148,7 @@ export const Footer = () => {
 						<input
 							id="footer-email"
 							type="email"
-							placeholder="Váš email"
+							placeholder={props.lang === "cs" ? "Váš email" : "Your email"}
 							className={`footer__input ${emailError.length ? "footer__input--false" : ""}`}
 							onChange={(event) => setEmail(event.target.value)}
 							value={email}
@@ -135,14 +156,14 @@ export const Footer = () => {
 						{emailError.length ? <span className="footer__message">{emailError}</span> : ""}
 						<textarea
 							id="footer-message"
-							placeholder="Váš dotaz"
+							placeholder={props.lang === "cs" ? "Váš dotaz" : "Your message"}
 							className={`footer__textarea ${messageError.length ? "footer__textarea--false" : ""}`}
 							onChange={(event) => setMessage(event.target.value)}
 							value={message}
 						/>
 						{messageError.length ? <span className="footer__message">{messageError}</span> : ""}
 						<button className="footer__button" onClick={(event) => validateForm(event)}>
-							Odeslat dotaz
+							{props.lang === "cs" ? "Odeslat dotaz" : "Send your message"}
 						</button>
 					</form>
 					{send ? (
@@ -154,10 +175,12 @@ export const Footer = () => {
 							<div className="footer__messageBody">
 								<div className="footer__messageTextCont">
 									<div className="footer__messageText">
-										Formulář byl úspěšně odeslán. Vyčkejte prosím než Vás majitel kontaktuje.
+										{props.lang === "cs"
+											? "Formulář byl úspěšně odeslán. Vyčkejte prosím než Vás majitel kontaktuje."
+											: "The form was sent successfully. Please wait while the owner contacts you."}
 									</div>
 									<div className="footer__button" onClick={finishForm}>
-										pokračovat
+										{props.lang === "cs" ? "pokračovat" : "continue"}
 									</div>
 								</div>
 							</div>
@@ -165,10 +188,12 @@ export const Footer = () => {
 							<div className="footer__messageBody">
 								<div className="footer__messageTextCont">
 									<div className="footer__messageText">
-										Formulář se nepodařilo odeslat. Zkuste to prosím za pár minut.
+										{props.lang === "cs"
+											? "Formulář se nepodařilo odeslat. Zkuste to prosím za pár minut."
+											: "The form could not be submitted. Please try again in a few minutes."}
 									</div>
 									<div className="footer__button" onClick={finishFormToContinue}>
-										pokračovat
+										{props.lang === "cs" ? "pokračovat" : "continue"}
 									</div>
 								</div>
 							</div>

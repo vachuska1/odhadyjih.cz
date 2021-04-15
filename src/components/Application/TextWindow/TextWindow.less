@@ -1,12 +1,73 @@
+@import "../../../less/breakpoint";
+
 .textWindow {
 	display: grid;
 	grid-template:
 		".   content ." auto /
 		1fr 1000px 1fr;
 	width: 100%;
-	height: 400px;
+	@media only screen and (max-width: @breakpoint-desktop) {
+		grid-template:
+			"content" auto /
+			1fr;
+	}
 }
 
 .textBlock {
 	grid-area: content;
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+	box-sizing: border-box;
+	&__heading {
+		margin: 0 auto 20px;
+		font-size: 28px;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+	&__text {
+		position: relative;
+		padding-left: 24px;
+		margin-bottom: 10px;
+		font-size: 18px;
+		text-align: justify;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 10px;
+			height: 10px;
+			background-color: var(--background-color-4);
+			border-radius: 50%;
+		}
+	}
+	&__appartment {
+		padding-left: 24px;
+		margin-top: 30px;
+	}
+	&__subHeading {
+		margin-bottom: 20px;
+		font-size: 24px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+	&__subText {
+		position: relative;
+		padding-left: 20px;
+		margin-bottom: 8px;
+		font-size: 16px;
+		text-align: justify;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 6px;
+			height: 6px;
+			background-color: var(--background-color-4);
+			border-radius: 50%;
+		}
+	}
 }

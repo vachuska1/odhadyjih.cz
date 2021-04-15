@@ -102,6 +102,6 @@ module.exports = {
         }),
     ],
     resolve: {
-        extensions: [ '.tsx', '.components', '.js', '.json' ],
+        extensions: [ '.tsx', '.ts', '.components', '.js', '.json' ],
     },
 };

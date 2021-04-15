@@ -12,6 +12,7 @@
 		font-size: 32px;
 		font-weight: bold;
 		text-transform: uppercase;
+		letter-spacing: 2px;
 	}
 	&__cont {
 		display: flex;
@@ -53,16 +54,24 @@
 	}
 	&__social {
 		display: flex;
+		align-items: center;
+		margin: 6px 0;
 	}
-	//&__socialIcon {
-	//	width: 30px;
-	//	height: 30px;
-	//	margin-right: 6px;
-	//	cursor: pointer;
-	//	&--instagram {
-	//		background: url("../../images/icons/instagram.svg") no-repeat center/30px;
-	//	}
-	//}
+	&__socialIcon {
+		width: 30px;
+		height: 30px;
+		margin-right: 10px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 30px;
+		cursor: pointer;
+		&--fb {
+			background-image: url("../../../images/icons/fb.svg");
+		}
+		&--ig {
+			background-image: url("../../../images/icons/ig.svg");
+		}
+	}
 	&__form {
 		display: flex;
 		flex-direction: column;
