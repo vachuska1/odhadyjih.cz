@@ -21,7 +21,7 @@ module.exports = {
                 test: /\.tsx?$/,
                 loader: 'string-replace-loader',
                 options: {
-                    search: './API/',
+                    search: './src/API/',
                     replace: 'http://localhost:8000/own_projects/personal/www.apartmanykratka.cz/src/API/',
                     flags: 'g'
                 }

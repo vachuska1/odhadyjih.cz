@@ -10,7 +10,7 @@ $name = $json["name"];
 $email = $json["email"];
 $message = $json["message"];
 
-$emailTo = "vachuska.alexander@gmail.com";
+$emailTo = "info@apartmanykratka.cz";
 $headers =
     "From:" . $email . "\r\n" .
     "Reply-To:" . $email . "\r\n" .
@@ -18,7 +18,7 @@ $headers =
     "MIME-Version: 1.0" . "\r\n" .
     "Content-Transfer-Encoding: 8bit" . "\r\n" .
     "Content-Type: text/html; charset=utf-8" . "\r\n";
-$subjectAdmin = '=?UTF-8?B?' . base64_encode('Potvrzení o požadavku na stránce AtraktivniRegion.cz') . '?=';
+$subjectAdmin = '=?UTF-8?B?' . base64_encode('Potvrzení o požadavku na stránce ApartmanyKratka.cz') . '?=';
 $message =
     '<div style="
             display: flex; 

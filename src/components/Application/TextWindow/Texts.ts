@@ -27,21 +27,28 @@ export const TextCS: TextsInterface = {
 };
 
 export const TextEN: TextsInterface = {
-	heading: "Appartments",
-	location1: "",
-	location2: "",
-	gastronomy: "",
-	nearby: "",
+	heading: "Apartments Krátká",
+	location1:
+		"Apartments Krátká are located 100 m from the center of Sušice, which is considered the gateway to Šumava Mountains.",
+	location2:
+		"Sušice is located in the southwestern part of Pilsen region. Its population is about 11,000 people. Despite its size Sušice has many cultural events, gastronomic experiences and sport activities to offer.  There are many options to do sports both in summer and winter season. In the summer season you can go hiking, biking, fishing, play tennis or enjoy other outdoor activities. There are local boat rentals, adventure park, outdoor and indoor pool, etc. In the winter season the nearby destinations offer skiing options, too.  You can go downhill- and cross-country skiing in Šumava mountains, or skating at a local indoor ice rink.",
+	gastronomy:
+		"There are great options when it comes to eating out in Sušice and also in the nearby area. You can eat out in one of local restaurants, have a nice coffee and cake in one of many local cozy cafés, or enjoy great food in Santos – large beer garden with a kiosk, or at Svatobor Lookout Tower (more information provided in the apartment).",
+	nearby:
+		"Outside of Sušice (within a 40 kilometer radius) there are many attractive areas of Šumava Mountains such as Kvilda, Modrava, Železná Ruda, Annín, Prášily, Kašperské Hory, Zadov or Rabí. There is a bus station near Krátká Apartments and we can only recommend taking regularly scheduled bus lines that will bring you all the way to places of your own choice (buses also provide bicycle transportation).",
 	appartments: [
 		{
-			heading: "",
-			mainInfo: "",
-			info1: "",
-			info2: "",
-			info3: "",
-			info4: "",
-			info5: "",
-			info6: "",
+			heading: "Apartment No. 1",
+			mainInfo:
+				"This two-bedroom apartment of the total size of 70 square meters has its own kitchen, bathroom, closet, and storage space in the basement.",
+			info1:
+				"The smaller bedroom is fully furnished – there is a double bed, wardrobe, bedside tables, TV, lamps, a coat hanger and few decorations. The larger bedroom has its own closet, double bed, sofa bed, TV, chest of drawers, bedside tables, lamps and few decorations. The kitchen is fully equipped. There is a stove with ceramic hob, vent fan and utensils for both cooking and dining. You can prepare yourself coffee as well and use a coffee machine that is in the kitchen, and store food in the fridge or freezer. There is a dining table with chairs.",
+			info2:
+				"In the bathroom there is a shower, sink, a cabinet, washing machine and a drying rack. You can also use an iron and ironing board . In the hallway there is a large mirror and a coat hanger. In the price following is included: wifi, bedding, towels, basic cleaning products, basic hygiene items (soap, toilet paper, detergent).",
+			info3: "Breakfast is not included, it it optional and only per request and prior agreement.",
+			info4: "In Apartments Krátká small pets are allowed.",
+			info5: "Apartments are strictly nonsmoking. ",
+			info6: "We kindly ask to be considerate and keep the quiet hours from 10pm to 6am.",
 		},
 	],
 };

@@ -91,7 +91,7 @@ export const Menu: React.FC<MenuProps> = (props) => {
 	return (
 		<div className={"menu"}>
 			<div className={"menu__left"}>
-				<div className={"menu__logo"}>apartmány krátká</div>
+				<div className={"menu__logo"}>{props.lang === "cs" ? "apartmány krátká" : "apartments krátká"}</div>
 				<div id={"menu__mobile"} className={"menu__mobile"} onClick={openMobileMenu} />
 				<div
 					className={`menu__lang ${props.lang === "cs" ? "menu__lang--en" : "menu__lang--cs"}`}

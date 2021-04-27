@@ -68,7 +68,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
 	};
 
 	const sendForm = () => {
-		fetch("./API/contact/Contact.php", {
+		fetch("./src/API/contact/Contact.php", {
 			method: "POST",
 			headers: {
 				Accept: "application/json",
