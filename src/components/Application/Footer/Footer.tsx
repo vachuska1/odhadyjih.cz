@@ -121,10 +121,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
 					<div className="footer__text">IČO: 02170779</div>
 					<div className="footer__headName">{props.lang === "cs" ? "Sociální sítě" : "Social sites"}</div>
 					<div className="footer__social">
-						<a href="https://www.apartmanykratka.cz" target="_blank">
-							<div className="footer__socialIcon footer__socialIcon--fb" />
-						</a>
-						<a href="https://www.apartmanykratka.cz" target="_blank">
+						<a href="https://www.instagram.com/apartmanykratka/" target="_blank">
 							<div className="footer__socialIcon footer__socialIcon--ig" />
 						</a>
 					</div>
