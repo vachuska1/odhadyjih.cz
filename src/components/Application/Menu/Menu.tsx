@@ -102,14 +102,6 @@ export const Menu: React.FC<MenuProps> = (props) => {
 				<div
 					className={"menu__element"}
 					onClick={() => {
-						handleSlidePart(1);
-					}}
-				>
-					{props.lang === "cs" ? "Fotogalerie" : "Photogallery"}
-				</div>
-				<div
-					className={"menu__element"}
-					onClick={() => {
 						handleSlidePart(2);
 					}}
 				>

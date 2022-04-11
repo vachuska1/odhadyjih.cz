@@ -2,9 +2,10 @@ import * as React from "react";
 import { useState } from "react";
 import { Menu } from "./Menu/Menu";
 import { PhotoGallery } from "./PhotoGallery/PhotoGallery";
-import { TextWindow } from "./TextWindow/TextWindow";
 import { MapWindow } from "./Map/MapWindow";
 import { Footer } from "./Footer/Footer";
+import { PhotogalleryTextContent } from "./PhotogalleryTextContent/PhotogalleryTextContent";
+import { TextWindow } from "./TextWindow/TextWindow";
 
 export const Application = () => {
 	const [lang, setLang] = useState(
@@ -19,8 +20,10 @@ export const Application = () => {
 	return (
 		<>
 			<Menu lang={lang} changeLang={(event) => changeLang(event)} />
-			<PhotoGallery />
-			<TextWindow lang={lang} />
+			<div id={"textWindow"}>
+				<TextWindow lang={lang} />
+				<PhotogalleryTextContent lang={lang} />
+			</div>
 			<MapWindow />
 			<Footer lang={lang} />
 		</>

@@ -1,16 +1,8 @@
-import { TextsInterface } from "./TextsInterface";
+import { PhotogalleryTextContentInfoType } from "./PhotogalleryTextContentInfoType";
 
-export const TextCS: TextsInterface = {
-	heading: "Apartmány Krátká",
-	location1: "Apartmány Krátká se nachází 100 m od centra města Sušice, která je považovaná za bránu Šumavy.",
-	location2:
-		"Sušice leží v jihozápadní části Plzeňského kraje, má cca 11.000 obyvatel. Má velmi bohaté kulturní, sportovní i gastronomické vyžití. Dostupné sportovní aktivity jsou vhodné pro zimní i letní období. V letní sezóně je ideální turistika, cyklistika, rybaření, tenis a další venkovní aktivity, které můžete využívat i díky místním půjčovnám lodí, lanovému parku, venkovnímu i krytému bazénu apod. V zimní sezóně nabízí přilehlé destinace široké možnosti lyžování - sjezdového i běžkařského, bruslení v krytém zimním stadionu, turistiku apod. (v apartmánu jsou konkrétní tipy).",
-	gastronomy:
-		"Gastronomie je v samotné Sušici i jejím okolí bohatá, rozmanitá, na velmi dobré úrovni. Najdete zde velký výběr jak z gastronomie restaurační, kavárenské, tak venkovní - rychlo-obslužné - Ostrov Santos, Rozhledna Svatobor (v apartmánu jsou konkrétní tipy).",
-	nearby:
-		"Nedaleko Sušice - v dosahu 10 až 40 km se nacházejí turisticky atraktivní oblasti Šumavy jako je Kvilda, Modrava, Železná Ruda, Annín, Prášily, Kašperské Hory, Zadov, Rabí a další. V blízkosti Apartmánů Krátká se nachází autobusové nádraží, ze kterého je možné využít pravidelné linky a do těchto destinací  se pohodlně dopravit (zajišťují i přepravu kol).",
-	appartments: [
-		{
+export const PhotogalleryTextContentInfoCS: Array<PhotogalleryTextContentInfoType> = [
+	{
+		appartmentInfo: {
 			heading: "Apartmán č. 1",
 			mainInfo:
 				"Má 70m2. Jeho součástí jsou dvě ložnice, kuchyň, koupelna, šatna, vstupní chodba a prostor ve sklepní části pro úschovu věcí.",
@@ -23,7 +15,21 @@ export const TextCS: TextsInterface = {
 			info5: "Apatrmány jsou zcela nekuřácké.",
 			info6: "Žádáme o dodržování nočního klidu od 22:00 do 6:00",
 		},
-		{
+		photogalleryInfo: [
+			"photo_1",
+			"photo_2",
+			"photo_3",
+			"photo_4",
+			"photo_5",
+			"photo_6",
+			"photo_7",
+			"photo_8",
+			"photo_9",
+			"photo_10",
+		],
+	},
+	{
+		appartmentInfo: {
 			heading: "Apartmán č. 2",
 			mainInfo:
 				"Má 48m2. Jeho součástí je ložnice, kuchyň, koupelna, vstupní chodba a prostor ve sklepní části pro úschovu věcí.",
@@ -36,21 +42,22 @@ export const TextCS: TextsInterface = {
 			info5: "Apatrmány jsou zcela nekuřácké.",
 			info6: "Žádáme o dodržování nočního klidu od 22:00 do 6:00",
 		},
-	],
-};
+		photogalleryInfo: [
+			"photo_2_1",
+			"photo_2_2",
+			"photo_2_3",
+			"photo_2_4",
+			"photo_2_5",
+			"photo_2_6",
+			"photo_2_7",
+			"photo_2_8",
+		],
+	},
+];
 
-export const TextEN: TextsInterface = {
-	heading: "Apartments Krátká",
-	location1:
-		"Apartments Krátká are located 100 m from the center of Sušice, which is considered the gateway to Šumava Mountains.",
-	location2:
-		"Sušice is located in the southwestern part of Pilsen region. Its population is about 11,000 people. Despite its size Sušice has many cultural events, gastronomic experiences and sport activities to offer.  There are many options to do sports both in summer and winter season. In the summer season you can go hiking, biking, fishing, play tennis or enjoy other outdoor activities. There are local boat rentals, adventure park, outdoor and indoor pool, etc. In the winter season the nearby destinations offer skiing options, too.  You can go downhill- and cross-country skiing in Šumava mountains, or skating at a local indoor ice rink.",
-	gastronomy:
-		"There are great options when it comes to eating out in Sušice and also in the nearby area. You can eat out in one of local restaurants, have a nice coffee and cake in one of many local cozy cafés, or enjoy great food in Santos – large beer garden with a kiosk, or at Svatobor Lookout Tower (more information provided in the apartment).",
-	nearby:
-		"Outside of Sušice (within a 40 kilometer radius) there are many attractive areas of Šumava Mountains such as Kvilda, Modrava, Železná Ruda, Annín, Prášily, Kašperské Hory, Zadov or Rabí. There is a bus station near Krátká Apartments and we can only recommend taking regularly scheduled bus lines that will bring you all the way to places of your own choice (buses also provide bicycle transportation).",
-	appartments: [
-		{
+export const PhotogalleryTextContentInfoEN: Array<PhotogalleryTextContentInfoType> = [
+	{
+		appartmentInfo: {
 			heading: "Apartment No. 1",
 			mainInfo:
 				"This two-bedroom apartment of the total size of 70 square meters has its own kitchen, bathroom, closet, and storage space in the basement.",
@@ -63,5 +70,42 @@ export const TextEN: TextsInterface = {
 			info5: "Apartments are strictly nonsmoking. ",
 			info6: "We kindly ask to be considerate and keep the quiet hours from 10pm to 6am.",
 		},
-	],
-};
+		photogalleryInfo: [
+			"photo_1",
+			"photo_2",
+			"photo_3",
+			"photo_4",
+			"photo_5",
+			"photo_6",
+			"photo_7",
+			"photo_8",
+			"photo_9",
+			"photo_10",
+		],
+	},
+	{
+		appartmentInfo: {
+			heading: "Apartment No. 2",
+			mainInfo:
+				"Má 48m2. Jeho součástí je ložnice, kuchyň, koupelna, vstupní chodba a prostor ve sklepní části pro úschovu věcí.",
+			info1:
+				"V ložnici je manželská postel, skříň, noční stolky, TV, lampičky, věšák a drobná dekorace. Ložnice dále nabízí rozkládací pohovku.  Kuchyňská linka je se sklokeramickou desku, digestoří, troubou, nádobím jak na stolování, tak na vaření. Dále je součástí kuchyně kávovar, lednice s mrazákem a jídelní stůl s židlemi. Koupelna je vybavena sprchovým koutem, umyvadlem, skříňkou, pračkou, sušákem na prádlo. Další vybavení, které je součástí vybavení apartmánu je  v chodbě velké zrcadlo a věšák.",
+			info2:
+				"V ceně pobytu je neomezené užívání wifi, ložní prádlo, osušky, základní čistící prostředky a základní hygienické potřeby (mýdlo, jar, toaletní papír).",
+			info3: "Snídaně nejsou běžnou součástí pobytu, jsou možné po individuální domluvě.",
+			info4: "V Apartmánu Krátká umožňujeme i ubytovaní s menšími domácími mazlíčky.",
+			info5: "Apatrmány jsou zcela nekuřácké.",
+			info6: "Žádáme o dodržování nočního klidu od 22:00 do 6:00",
+		},
+		photogalleryInfo: [
+			"photo_2_1",
+			"photo_2_2",
+			"photo_2_3",
+			"photo_2_4",
+			"photo_2_5",
+			"photo_2_6",
+			"photo_2_7",
+			"photo_2_8",
+		],
+	},
+];

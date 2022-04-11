@@ -2,7 +2,12 @@ import * as React from "react";
 import { useEffect, useState } from "react";
 import "./PhotoGallery.less";
 
-export const PhotoGallery = () => {
+export interface PhotoGalleryProps {
+	photos: Array<string>;
+	index: number;
+}
+
+export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos, index }) => {
 	let left = 0;
 	const oneStep = 300;
 	const [leftRight, setLeftRight] = useState<boolean>(false);
@@ -13,7 +18,7 @@ export const PhotoGallery = () => {
 
 	useEffect(() => {
 		if (counter > 0) {
-			const photoGallery = document.getElementById("gallery")!;
+			const photoGallery = document.getElementById(`gallery--${index}`)!;
 			if (leftRight) {
 				if (restStep !== 0) {
 					photoGallery.animate(
@@ -72,7 +77,7 @@ export const PhotoGallery = () => {
 	}, [step, counter, restStep, left, leftRight]);
 
 	const scrollOverRight = () => {
-		const photoGallery = document.getElementById("gallery")!;
+		const photoGallery = document.getElementById(`gallery--${index}`)!;
 		const windowWidth = window.innerWidth;
 		const galleryWidth = photoGallery.offsetWidth;
 		const actualSteps = Math.floor((galleryWidth - windowWidth) / oneStep);
@@ -100,39 +105,16 @@ export const PhotoGallery = () => {
 	};
 
 	return (
-		<div id={"photoGalleryBlock"} className={"photoGalleryBlock"}>
-			<div id={"photoGallery"} className={"photoGallery"}>
-				<div id={"gallery"} className={"gallery"}>
-					<div>
-						<img src={"./src/images/photogallery/photo_1.jpg"} alt={"image1"} />
-					</div>
-					<div>
-						<img src={"./src/images/photogallery/photo_2.jpg"} alt={"image2"} />
-					</div>
-					<div>
-						<img src={"./src/images/photogallery/photo_3.jpg"} alt={"image3"} />
-					</div>
-					<div>
-						<img src={"./src/images/photogallery/photo_4.jpg"} alt={"image4"} />
-					</div>
-					<div>
-						<img src={"./src/images/photogallery/photo_5.jpg"} alt={"image4"} />
-					</div>
-					<div>
-						<img src={"./src/images/photogallery/photo_6.jpg"} alt={"image4"} />
-					</div>
-					<div>
-						<img src={"./src/images/photogallery/photo_7.jpg"} alt={"image4"} />
-					</div>
-					<div>
-						<img src={"./src/images/photogallery/photo_8.jpg"} alt={"image4"} />
-					</div>
-					<div>
-						<img src={"./src/images/photogallery/photo_9.jpg"} alt={"image4"} />
-					</div>
-					<div>
-						<img src={"./src/images/photogallery/photo_10.jpg"} alt={"image4"} />
-					</div>
+		<div id={`photoGalleryBlock--${index}`} className={"photoGalleryBlock"}>
+			<div id={`photoGallery--${index}`} className={"photoGallery"}>
+				<div id={`gallery--${index}`} className={"gallery"}>
+					{photos.map((photo, index) => {
+						return (
+							<div>
+								<img src={`./src/images/photogallery/${photo}.jpg`} alt={photo} />
+							</div>
+						);
+					})}
 				</div>
 			</div>
 			{step > 0 ? (
