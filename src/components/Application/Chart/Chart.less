@@ -1,0 +1,143 @@
+.Chart {
+	height: 500px;
+	width: 1000px;
+	margin: 100px auto 0;
+	position: relative;
+	&__Off {
+		display: none;
+		&--active {
+			display: block;
+			cursor: pointer;
+			position: absolute;
+			right: 10px;
+			top: 5px;
+			font-size: 40px;
+			font-weight: bold;
+			z-index: 8;
+		}
+	}
+	&__Big {
+		position: absolute;
+		top: 0;
+		width: 1000px;
+		height: 522px;
+		&--active {
+			display: none;
+		}
+	}
+	&__KarelPhoto {
+		top: 380px;
+		left: 365px;
+		&--active {
+			display: none;
+		}
+	}
+	&__NatkaPhoto {
+		top: 210px;
+		right: 290px;
+		&--active {
+			display: none;
+		}
+	}
+	&__NatkaPhoto,
+	&__KarelPhoto {
+		position: absolute;
+		cursor: pointer;
+		width: 90px;
+		height: 90px;
+		border-radius: 50%;
+		border: 2px dashed black;
+		opacity: 1;
+		background-repeat: no-repeat;
+	}
+}
+@media only screen and (max-width: 1000px) {
+	.Chart {
+		width: 550px;
+		height: 400px;
+		&__Big {
+			left: -100px;
+			width: 750px;
+			height: 392px;
+		}
+		&__NatkaPhoto,
+		&__KarelPhoto {
+			width: 72px;
+			height: 72px;
+		}
+		&__NatkaPhoto {
+			top: 150px;
+			left: 350px;
+		}
+		&__KarelPhoto {
+			top: 280px;
+			left: 170px;
+		}
+	}
+}
+@media only screen and (max-width: 600px) {
+	.Chart {
+		width: 400px;
+		height: 360px;
+		&__Off {
+			&--active {
+				right: 70px;
+				top: 2px;
+				font-size: 30px;
+				z-index: 8;
+			}
+		}
+		&__Big {
+			left: -3vw;
+			right: -3vw;
+			width: 400px;
+			height: 280px;
+		}
+		&__NatkaPhoto,
+		&__KarelPhoto {
+			width: 62px;
+			height: 62px;
+		}
+		&__NatkaPhoto {
+			top: 100px;
+			left: 215px;
+		}
+		&__KarelPhoto {
+			top: 185px;
+			left: 105px;
+		}
+	}
+}
+@media only screen and (max-width: 400px) {
+	.Chart {
+		width: 360px;
+		height: 360px;
+		&__Off {
+			&--active {
+				right: 35px;
+				top: 2px;
+				font-size: 30px;
+				z-index: 8;
+			}
+		}
+		&__Big {
+			left: -3vw;
+			right: -3vw;
+			width: 360px;
+			height: 280px;
+		}
+		&__NatkaPhoto,
+		&__KarelPhoto {
+			width: 58px;
+			height: 58px;
+		}
+		&__NatkaPhoto {
+			top: 100px;
+			left: 190px;
+		}
+		&__KarelPhoto {
+			top: 185px;
+			left: 95px;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+.WhoAre {
+	position: relative;
+	&__Desc {
+		height: 80px;
+		width: 200px;
+		text-align: center;
+		position: absolute;
+		background-color: transparent;
+		font-size: 0;
+		top: 106px;
+		&--active {
+			transition: 1000ms ease-out;
+			font-size: 17px;
+			background-color: white;
+			opacity: 0.9;
+		}
+	}
+}
+@media only screen and (max-width: 550px) {
+	.WhoAre {
+		&__Desc {
+			margin-bottom: 40px;
+			width: 160px;
+			top: 70px;
+			height: 76px;
+		}
+	}
+}

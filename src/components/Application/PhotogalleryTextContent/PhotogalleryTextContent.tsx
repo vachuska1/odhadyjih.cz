@@ -1,6 +1,5 @@
 import * as React from "react";
 import { PhotoGallery } from "../PhotoGallery/PhotoGallery";
-import { PhotogalleryText } from "./PhotogalleryText";
 import { PhotogalleryTextContentInfoCS, PhotogalleryTextContentInfoEN } from "./PhotogalleryTextContentInfo";
 import { PhotogalleryTextContentInfoType } from "./PhotogalleryTextContentInfoType";
 
@@ -17,7 +16,6 @@ export const PhotogalleryTextContent: React.FC<PhotogalleryTextContentProps> = (
 			{fileToLoad.map((appartment, index) => {
 				return (
 					<>
-						<PhotogalleryText texts={appartment.appartmentInfo} index={index} />
 						<PhotoGallery photos={appartment.photogalleryInfo} index={index} />;
 					</>
 				);

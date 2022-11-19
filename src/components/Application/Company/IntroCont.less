@@ -1,0 +1,55 @@
+.IntroCont {
+	height: 100px;
+	width: 80vw;
+	margin: 100px auto;
+	color: black;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	&__Round {
+		cursor: pointer;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		border: 3px dotted black;
+		&:hover {
+			border: 3px solid black;
+		}
+	}
+	&__Image {
+		position: relative;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+	}
+	&__ImageKarel {
+		background: url(../../../images/people/karel.png);
+	}
+	&__ImageNatka {
+		background: url(../../../images/people/natka.png);
+	}
+	&__ImageAles {
+		background: url(../../../images/people/karel.png);
+	}
+	&__ImageAles,
+	&__ImageNatka,
+	&__ImageKarel {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+@media only screen and (max-width: 550px) {
+	.IntroCont {
+		width: 90vw;
+		height: 200px;
+		&__Round {
+			width: 160px;
+			height: 160px;
+		}
+		&__Image {
+			width: 160px;
+			height: 160px;
+		}
+	}
+}

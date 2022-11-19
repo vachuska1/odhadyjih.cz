@@ -91,7 +91,9 @@ export const Menu: React.FC<MenuProps> = (props) => {
 	return (
 		<div className={"menu"}>
 			<div className={"menu__left"}>
-				<div className={"menu__logo"}>{props.lang === "cs" ? "apartmány krátká" : "apartments krátká"}</div>
+				<div className={"menu__logo"}>
+					{props.lang === "cs" ? "Odhady Jižní Čechy" : "South Bohemia Estimates"}
+				</div>
 				<div id={"menu__mobile"} className={"menu__mobile"} onClick={openMobileMenu} />
 				<div
 					className={`menu__lang ${props.lang === "cs" ? "menu__lang--en" : "menu__lang--cs"}`}
@@ -105,7 +107,7 @@ export const Menu: React.FC<MenuProps> = (props) => {
 						handleSlidePart(2);
 					}}
 				>
-					{props.lang === "cs" ? "Informace" : "Information"}
+					{props.lang === "cs" ? "Úvod" : "Introduction"}
 				</div>
 				<div
 					className={"menu__element"}
@@ -113,12 +115,20 @@ export const Menu: React.FC<MenuProps> = (props) => {
 						handleSlidePart(3);
 					}}
 				>
-					{props.lang === "cs" ? "Mapa" : "Map"}
+					{props.lang === "cs" ? "O nás" : "About us"}
 				</div>
 				<div
 					className={"menu__element"}
 					onClick={() => {
 						handleSlidePart(4);
+					}}
+				>
+					{props.lang === "cs" ? "Služby" : "Services"}
+				</div>
+				<div
+					className={"menu__element"}
+					onClick={() => {
+						handleSlidePart(5);
 					}}
 				>
 					{props.lang === "cs" ? "Kontakt" : "Contact"}

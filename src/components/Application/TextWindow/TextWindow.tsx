@@ -12,11 +12,18 @@ export const TextWindow: React.FC<TextWindowProps> = ({ lang }) => {
 	return (
 		<div className={"textWindow"}>
 			<div className={"textBlock textBlock--1"}>
+				<div className={"textBlock__head"}>{language.head}</div>
+				<br />
 				<div className={"textBlock__heading"}>{language.heading}</div>
 				<div className={"textBlock__text"}>{language.location1}</div>
-				<div className={"textBlock__text"}>{language.location2}</div>
-				<div className={"textBlock__text"}>{language.gastronomy}</div>
-				<div className={"textBlock__text"}>{language.nearby}</div>
+				<br />
+				<br />
+				<div className={"textBlock__heading"}>{language.heading2}</div>
+				<div className={"textBlock__text"}>{language.text}</div>
+				<div className={"textBlock__text"}>{language.text1}</div>
+				<div className={"textBlock__text"}>{language.text2}</div>
+				<div className={"textBlock__text"}>{language.text3}</div>
+				<div className={"textBlock__text"}>{language.text4}</div>
 			</div>
 		</div>
 	);

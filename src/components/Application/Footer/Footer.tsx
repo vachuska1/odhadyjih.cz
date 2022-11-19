@@ -106,27 +106,29 @@ export const Footer: React.FC<FooterProps> = (props) => {
 
 	return (
 		<div id="footer" className="footer">
-			<div className="footer__heading">{props.lang === "cs" ? "Apartmány Krátká" : "Apartments Krátká"}</div>
+			<div className="footer__heading">
+				{props.lang === "cs" ? "Odhady Jižní Čechy" : "South bohemia estimates"}
+			</div>
 			<div className="footer__cont">
 				<div className="footer__contArea">
 					<div className="footer__headName">{props.lang === "cs" ? "Provozovatel:" : "Operator:"}</div>
-					<div className="footer__text">Petr Buschbaum</div>
-					<div className="footer__text">IČO: 66383790</div>
-					<div className="footer__text">DIČ: CZ7612302247</div>
+					<div className="footer__text">Vachi 11, Bruhis 10 </div>
+					<div className="footer__text">IČO: 1234556</div>
+					<div className="footer__text">DIČ: CZ1234567</div>
 					<div className="footer__headName">
 						{props.lang === "cs" ? "Kontaktní osoba:" : "Contact person:"}
 					</div>
-					<div className="footer__text">Andrea Buschbaumová</div>
-					<div className="footer__text">+420 776 640 479</div>
-					<div className="footer__text">IČO: 02170779</div>
+					<div className="footer__text">Prof. Ing. Natalie Jurdova CsC.</div>
+					<div className="footer__text">+420 111 222 333</div>
+					<div className="footer__text">IČO: xy</div>
 					<div className="footer__headName">{props.lang === "cs" ? "Sociální sítě" : "Social sites"}</div>
 					<div className="footer__social">
-						<a href="https://www.instagram.com/apartmanykratka/" target="_blank">
+						<a href="https://www.instagram.com/odhadyjiznicechy/" target="_blank">
 							<div className="footer__socialIcon footer__socialIcon--ig" />
 						</a>
 					</div>
 					<div className="footer__headName">{props.lang === "cs" ? "Najdete nás:" : "You can find us:"}</div>
-					<div className="footer__text">Krátká 7, Sušice 34201, Sušice III</div>
+					<div className="footer__text">Krajinská 244/17, 370 01 České Budějovice</div>
 				</div>
 				<div className="footer__contArea">
 					<div className="footer__headName footer__headName--padding">
@@ -200,7 +202,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
 			</div>
 			<div className="footer__sentence">
 				<div className="footer__sentence--logo" />
-				Copyright © 2021 ApartmanyKratka.cz
+				Vytvořil: jakswebem.cz
 			</div>
 		</div>
 	);

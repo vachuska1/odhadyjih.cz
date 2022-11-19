@@ -28,31 +28,6 @@ export const PhotogalleryTextContentInfoCS: Array<PhotogalleryTextContentInfoTyp
 			"photo_10",
 		],
 	},
-	{
-		appartmentInfo: {
-			heading: "Apartmán č. 2",
-			mainInfo:
-				"Má 48m2. Jeho součástí je ložnice, kuchyň, koupelna, vstupní chodba a prostor ve sklepní části pro úschovu věcí.",
-			info1:
-				"V ložnici je manželská postel, skříň, noční stolky, TV, lampičky, věšák a drobná dekorace. Ložnice dále nabízí rozkládací pohovku.  Kuchyňská linka je se sklokeramickou desku, digestoří, troubou, nádobím jak na stolování, tak na vaření. Dále je součástí kuchyně kávovar, lednice s mrazákem a jídelní stůl s židlemi. Koupelna je vybavena sprchovým koutem, umyvadlem, skříňkou, pračkou, sušákem na prádlo. Další vybavení, které je součástí vybavení apartmánu je  v chodbě velké zrcadlo a věšák.",
-			info2:
-				"V ceně pobytu je neomezené užívání wifi, ložní prádlo, osušky, základní čistící prostředky a základní hygienické potřeby (mýdlo, jar, toaletní papír).",
-			info3: "Snídaně nejsou běžnou součástí pobytu, jsou možné po individuální domluvě.",
-			info4: "V Apartmánu Krátká umožňujeme i ubytovaní s menšími domácími mazlíčky.",
-			info5: "Apatrmány jsou zcela nekuřácké.",
-			info6: "Žádáme o dodržování nočního klidu od 22:00 do 6:00",
-		},
-		photogalleryInfo: [
-			"photo_2_1",
-			"photo_2_2",
-			"photo_2_3",
-			"photo_2_4",
-			"photo_2_5",
-			"photo_2_6",
-			"photo_2_7",
-			"photo_2_8",
-		],
-	},
 ];
 
 export const PhotogalleryTextContentInfoEN: Array<PhotogalleryTextContentInfoType> = [
@@ -81,31 +56,6 @@ export const PhotogalleryTextContentInfoEN: Array<PhotogalleryTextContentInfoTyp
 			"photo_8",
 			"photo_9",
 			"photo_10",
-		],
-	},
-	{
-		appartmentInfo: {
-			heading: "Apartment No. 2",
-			mainInfo:
-				"Má 48m2. Jeho součástí je ložnice, kuchyň, koupelna, vstupní chodba a prostor ve sklepní části pro úschovu věcí.",
-			info1:
-				"V ložnici je manželská postel, skříň, noční stolky, TV, lampičky, věšák a drobná dekorace. Ložnice dále nabízí rozkládací pohovku.  Kuchyňská linka je se sklokeramickou desku, digestoří, troubou, nádobím jak na stolování, tak na vaření. Dále je součástí kuchyně kávovar, lednice s mrazákem a jídelní stůl s židlemi. Koupelna je vybavena sprchovým koutem, umyvadlem, skříňkou, pračkou, sušákem na prádlo. Další vybavení, které je součástí vybavení apartmánu je  v chodbě velké zrcadlo a věšák.",
-			info2:
-				"V ceně pobytu je neomezené užívání wifi, ložní prádlo, osušky, základní čistící prostředky a základní hygienické potřeby (mýdlo, jar, toaletní papír).",
-			info3: "Snídaně nejsou běžnou součástí pobytu, jsou možné po individuální domluvě.",
-			info4: "V Apartmánu Krátká umožňujeme i ubytovaní s menšími domácími mazlíčky.",
-			info5: "Apatrmány jsou zcela nekuřácké.",
-			info6: "Žádáme o dodržování nočního klidu od 22:00 do 6:00",
-		},
-		photogalleryInfo: [
-			"photo_2_1",
-			"photo_2_2",
-			"photo_2_3",
-			"photo_2_4",
-			"photo_2_5",
-			"photo_2_6",
-			"photo_2_7",
-			"photo_2_8",
 		],
 	},
 ];
