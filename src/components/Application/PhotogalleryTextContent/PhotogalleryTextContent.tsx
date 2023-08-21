@@ -16,7 +16,7 @@ export const PhotogalleryTextContent: React.FC<PhotogalleryTextContentProps> = (
 			{fileToLoad.map((appartment, index) => {
 				return (
 					<>
-						<PhotoGallery photos={appartment.photogalleryInfo} index={index} />;
+						<PhotoGallery photos={appartment.photogalleryInfo} index={index} />
 					</>
 				);
 			})}

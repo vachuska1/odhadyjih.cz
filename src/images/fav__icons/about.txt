@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Prociono
+- Font Author: Copyright (c) 2011, Barry Schwartz (chemoelectric@chemoelectric.org)
+- Font Source: http://fonts.gstatic.com/s/prociono/v22/r05YGLlR-KxAf9GGO8upyDYtStiJ.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

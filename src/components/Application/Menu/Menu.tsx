@@ -17,22 +17,23 @@ export const Menu: React.FC<MenuProps> = (props) => {
 
 	const handleSlidePart = (event) => {
 		if (window.innerWidth < 900) {
-			let offsetAnimation = 80;
+			let offsetAnimation = 5;
+			let offsetAnima = 390;
 			if (event === 0) {
 				scrollToPosition(0, offsetAnimation);
 			}
 			if (event === 1) {
-				const fifthPart = document.getElementById("photoGalleryBlock")!;
+				const fifthPart = document.getElementById("textWindow")!;
 				const topPosition = fifthPart.offsetTop;
-				scrollToPosition(topPosition, offsetAnimation);
+				scrollToPosition(topPosition, offsetAnima);
 			}
 			if (event === 2) {
-				const prizeList = document.getElementById("textWindow")!;
+				const prizeList = document.getElementById("Who")!;
 				const topPosition = prizeList.offsetTop;
 				scrollToPosition(topPosition, offsetAnimation);
 			}
 			if (event === 3) {
-				const gallery = document.getElementById("mapCont")!;
+				const gallery = document.getElementById("Services")!;
 				const topPosition = gallery.offsetTop;
 				scrollToPosition(topPosition, offsetAnimation);
 			}
@@ -44,22 +45,23 @@ export const Menu: React.FC<MenuProps> = (props) => {
 			const menu = document.getElementById("menu__right")!;
 			menu.classList.remove("menu__right--active");
 		} else {
-			let offsetAnimation = 80;
+			let offsetAnimation = 5;
+			let offsetAnima = -420;
 			if (event === 0) {
 				scrollToPosition(0, offsetAnimation);
 			}
 			if (event === 1) {
-				const fifthPart = document.getElementById("photoGalleryBlock")!;
+				const fifthPart = document.getElementById("textWindow")!;
 				const topPosition = fifthPart.offsetTop;
-				scrollToPosition(topPosition, offsetAnimation);
+				scrollToPosition(topPosition, offsetAnima);
 			}
 			if (event === 2) {
-				const prizeList = document.getElementById("textWindow")!;
+				const prizeList = document.getElementById("Who")!;
 				const topPosition = prizeList.offsetTop;
 				scrollToPosition(topPosition, offsetAnimation);
 			}
 			if (event === 3) {
-				const gallery = document.getElementById("mapCont")!;
+				const gallery = document.getElementById("Services")!;
 				const topPosition = gallery.offsetTop;
 				scrollToPosition(topPosition, offsetAnimation);
 			}
@@ -92,7 +94,12 @@ export const Menu: React.FC<MenuProps> = (props) => {
 		<div className={"menu"}>
 			<div className={"menu__left"}>
 				<div className={"menu__logo"}>
-					{props.lang === "cs" ? "Odhady Jižní Čechy" : "South Bohemia Estimates"}
+					<img
+						className="menu__Img"
+						src="./src/images/logo/OdhadyJizniCechy.svg"
+						width={"210px"}
+						height={"80px"}
+					/>
 				</div>
 				<div id={"menu__mobile"} className={"menu__mobile"} onClick={openMobileMenu} />
 				<div
@@ -104,7 +111,7 @@ export const Menu: React.FC<MenuProps> = (props) => {
 				<div
 					className={"menu__element"}
 					onClick={() => {
-						handleSlidePart(2);
+						handleSlidePart(1);
 					}}
 				>
 					{props.lang === "cs" ? "Úvod" : "Introduction"}
@@ -112,7 +119,7 @@ export const Menu: React.FC<MenuProps> = (props) => {
 				<div
 					className={"menu__element"}
 					onClick={() => {
-						handleSlidePart(3);
+						handleSlidePart(2);
 					}}
 				>
 					{props.lang === "cs" ? "O nás" : "About us"}
@@ -120,7 +127,7 @@ export const Menu: React.FC<MenuProps> = (props) => {
 				<div
 					className={"menu__element"}
 					onClick={() => {
-						handleSlidePart(4);
+						handleSlidePart(3);
 					}}
 				>
 					{props.lang === "cs" ? "Služby" : "Services"}
@@ -128,7 +135,7 @@ export const Menu: React.FC<MenuProps> = (props) => {
 				<div
 					className={"menu__element"}
 					onClick={() => {
-						handleSlidePart(5);
+						handleSlidePart(4);
 					}}
 				>
 					{props.lang === "cs" ? "Kontakt" : "Contact"}

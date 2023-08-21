@@ -10,7 +10,7 @@ export const Howdo: React.FC<HowdoProps> = ({ lang }) => {
 	const language = lang === "cs" ? HowdoInfoCS : HowdoInfoEN;
 
 	return (
-		<div className={"textWindow"}>
+		<div id={"Services"} className={"textWindow"}>
 			<div className={"textBlock textBlock--1"}>
 				<div className={"textBlock__head"}>{language.head}</div>
 				<br />

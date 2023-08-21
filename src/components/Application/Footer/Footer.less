@@ -1,20 +1,33 @@
 @import "../../../less/breakpoint";
 
 .footer {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template:
+		". cont logo ." auto
+		". web web . " auto /
+		1fr 45vw 45vw 1fr;
 	width: 100%;
 	box-shadow: 0 -14px 30px -20px var(--background-alpha-1);
 	color: var(--text-color-3);
 	background-color: var(--background-color-1);
 	&__heading {
+		grid-area: logo;
+		place-self: center;
 		margin: 20px auto;
 		font-size: 32px;
 		font-weight: bold;
 		text-transform: uppercase;
 		letter-spacing: 2px;
 	}
+	&__logo {
+		background: url(../../../images/logo/OdhadyJizniCechy.svg);
+		background-size: 300px;
+		width: 300px;
+		height: 110px;
+		background-repeat: no-repeat;
+	}
 	&__cont {
+		grid-area: cont;
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
@@ -131,7 +144,7 @@
 		height: 40px;
 	}
 	&__messageBody {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		display: flex;
@@ -166,6 +179,14 @@
 		border-color: var(--border-color-1) transparent transparent transparent;
 		border-radius: 50%;
 		animation: loadingSpinner 0.8s linear forwards infinite;
+	}
+	&__web {
+		grid-area: web;
+		text-align: center;
+		cursor: pointer;
+	}
+	a {
+		color: black;
 	}
 	@media only screen and (max-width: @breakpoint-desktop) {
 		&__design {
@@ -203,8 +224,23 @@
 		}
 	}
 }
+@media only screen and (max-width: 700px) {
+	.footer {
+		text-align: center;
+		grid-template:
+			". logo ." auto
+			". cont ." auto
+			". web ." auto/
+			1fr 80vw 1fr;
+		&__logo {
+			background-size: 230px;
+			width: 230px;
+			height: 100px;
+		}
+	}
+}
 
-@-webkit-keyframes loadingSpinner {
+@keyframes loadingSpinner {
 	0% {
 		transform: rotate(0deg);
 	}

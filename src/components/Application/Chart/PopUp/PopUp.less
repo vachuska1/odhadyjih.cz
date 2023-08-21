@@ -5,6 +5,9 @@
 		height: 370px;
 		border: 2px solid black;
 		background-color: white;
+		animation-name: border;
+		animation-delay: 2s;
+		animation-timing-function: linear;
 	}
 	&__Content {
 		display: grid;
@@ -26,6 +29,7 @@
 	}
 	&__Area {
 		grid-area: area;
+		&--Ales,
 		&--Karel,
 		&--Natka {
 			width: 700px;
@@ -38,6 +42,9 @@
 			margin-top: -7px;
 			margin-left: -190px;
 		}
+		&--Ales {
+			margin-top: 35px;
+		}
 	}
 	&__Photo {
 		margin-top: 70px;
@@ -47,6 +54,14 @@
 		border-radius: 50%;
 		border: 2px dashed black;
 		grid-area: photo;
+	}
+}
+@keyframes border {
+	from {
+		width: 1500px;
+	}
+	to {
+		width: 2000px;
 	}
 }
 @media only screen and (max-width: 1000px) {
@@ -74,7 +89,8 @@
 		}
 		&__Area {
 			&--Karel,
-			&--Natka {
+			&--Natka,
+			&__Ales {
 				width: 700px;
 				height: 400px;
 			}
@@ -85,6 +101,10 @@
 			&--Natka {
 				margin-top: -90px;
 				margin-left: -140px;
+			}
+			&--Ales {
+				margin-left: 40px;
+				margin-top: -60px;
 			}
 		}
 	}
@@ -117,7 +137,8 @@
 		}
 		&__Area {
 			&--Karel,
-			&--Natka {
+			&--Natka,
+			&__Ales {
 				width: 600px;
 				height: 400px;
 			}
@@ -128,6 +149,10 @@
 			&--Natka {
 				margin-top: -90px;
 				margin-left: -250px;
+			}
+			&--Ales {
+				margin-top: -70px;
+				margin-left: -70px;
 			}
 		}
 	}

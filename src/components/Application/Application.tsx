@@ -9,6 +9,7 @@ import { Chart } from "./Chart/Chart";
 import { Howdo } from "./Howdo/Howdo";
 import { IntroCont } from "./Company/IntroCont";
 import { Who } from "./Company/Who/Who";
+import { Input } from "./Input/Input";
 
 export const Application = () => {
 	const [lang, setLang] = useState(
@@ -26,12 +27,13 @@ export const Application = () => {
 			<div id={"textWindow"}>
 				<Chart />
 				<TextWindow lang={lang} />
-				<Howdo lang={lang} />
 				<Who lang={lang} />
 				<IntroCont />
+				<Howdo lang={lang} />
+				<Input lang={lang} />
 				<PhotogalleryTextContent lang={lang} />
 			</div>
-			<MapWindow />
+			<MapWindow lang={lang} />
 			<Footer lang={lang} />
 		</>
 	);

@@ -106,21 +106,41 @@ export const Footer: React.FC<FooterProps> = (props) => {
 
 	return (
 		<div id="footer" className="footer">
-			<div className="footer__heading">
-				{props.lang === "cs" ? "Odhady Jižní Čechy" : "South bohemia estimates"}
-			</div>
 			<div className="footer__cont">
 				<div className="footer__contArea">
-					<div className="footer__headName">{props.lang === "cs" ? "Provozovatel:" : "Operator:"}</div>
-					<div className="footer__text">Vachi 11, Bruhis 10 </div>
-					<div className="footer__text">IČO: 1234556</div>
-					<div className="footer__text">DIČ: CZ1234567</div>
 					<div className="footer__headName">
-						{props.lang === "cs" ? "Kontaktní osoba:" : "Contact person:"}
+						{props.lang === "cs" ? "Kontaktní osoby:" : "Contact persons:"}
 					</div>
-					<div className="footer__text">Prof. Ing. Natalie Jurdova CsC.</div>
-					<div className="footer__text">+420 111 222 333</div>
-					<div className="footer__text">IČO: xy</div>
+					<div className="footer__text">
+						<li>
+							<strong>Ing. Natálie Jurdová</strong>
+						</li>
+						tel: +420 727 838 131, IČO: 14325764 <br />
+					</div>
+					<br />
+					<div className="footer__text">
+						<li>
+							<strong>Ing. Karel Brůha</strong>
+						</li>{" "}
+						tel: +420 606 523 667, IČO: 07608128 <br />
+					</div>
+					<br />
+					<div className="footer__text">
+						<li>
+							<strong>Ing. Aleš Vachuška</strong>
+						</li>{" "}
+						tel: +420 774 104 020, IČO: 14437830{" "}
+					</div>
+					<br />
+					<div className="footer__headName">{props.lang === "cs" ? "Provozovatel:" : "Operator:"}</div>
+					<div className="footer__text">
+						<li>
+							<strong>Ing. Aleš Vachuška (jakswebem.cz)</strong>
+						</li>{" "}
+					</div>
+					<div className="footer__text">Tel: +420 774 104 020, IČO: 14437830</div>
+					<br />
+
 					<div className="footer__headName">{props.lang === "cs" ? "Sociální sítě" : "Social sites"}</div>
 					<div className="footer__social">
 						<a href="https://www.instagram.com/odhadyjiznicechy/" target="_blank">
@@ -128,9 +148,13 @@ export const Footer: React.FC<FooterProps> = (props) => {
 						</a>
 					</div>
 					<div className="footer__headName">{props.lang === "cs" ? "Najdete nás:" : "You can find us:"}</div>
-					<div className="footer__text">Krajinská 244/17, 370 01 České Budějovice</div>
+					<div className="footer__text">
+						<li>
+							<strong>Krajinská 244/17, 370 01 České Budějovice</strong>
+						</li>
+					</div>
 				</div>
-				<div className="footer__contArea">
+				{/* <div className="footer__contArea">
 					<div className="footer__headName footer__headName--padding">
 						{props.lang === "cs" ? "Kontaktujte nás:" : "Contact us:"}
 					</div>
@@ -197,12 +221,15 @@ export const Footer: React.FC<FooterProps> = (props) => {
 								</div>
 							</div>
 						)
-					) : null}
-				</div>
+					) : null} */}
+				{/* </div> */}
 			</div>
-			<div className="footer__sentence">
-				<div className="footer__sentence--logo" />
-				Vytvořil: jakswebem.cz
+			<div className="footer__heading">
+				<div className="footer__logo"></div>
+			</div>
+			<div className="footer__web">
+				Vytvořil:
+				<a href="https://www.jakswebem.cz/">jakswebem.cz</a>
 			</div>
 		</div>
 	);

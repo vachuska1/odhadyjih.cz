@@ -21,6 +21,13 @@
 		letter-spacing: 3px;
 		color: var(--text-color-3);
 	}
+	&__logo {
+		position: relative;
+	}
+	&__Img {
+		position: absolute;
+		margin-top: -40px;
+	}
 	&__mobile,
 	&__lang {
 		display: none;
@@ -65,8 +72,14 @@
 			align-items: center;
 		}
 		&__logo {
+			height: 80px;
 			grid-area: logo;
-			text-align: center;
+			display: grid;
+			grid-template: ". img ." 80px / 1fr 200px 1fr;
+		}
+		&__Img {
+			grid-area: img;
+			margin: 0 0;
 		}
 		&__mobile {
 			grid-area: menu;
@@ -125,7 +138,7 @@
 	}
 }
 
-@-webkit-keyframes menuClose {
+@keyframes menuClose {
 	0% {
 		transform: rotate(0deg);
 	}
@@ -134,7 +147,7 @@
 	}
 }
 
-@-webkit-keyframes menuOpen {
+@keyframes menuOpen {
 	0% {
 		transform: rotate(-180deg);
 	}

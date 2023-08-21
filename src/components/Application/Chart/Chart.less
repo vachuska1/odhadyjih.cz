@@ -3,6 +3,9 @@
 	width: 1000px;
 	margin: 100px auto 0;
 	position: relative;
+	&--active {
+		margin-bottom: -200px;
+	}
 	&__Off {
 		display: none;
 		&--active {
@@ -25,6 +28,13 @@
 			display: none;
 		}
 	}
+	&__AlesPhoto {
+		top: 110px;
+		left: 305px;
+		&--active {
+			display: none;
+		}
+	}
 	&__KarelPhoto {
 		top: 380px;
 		left: 365px;
@@ -40,7 +50,8 @@
 		}
 	}
 	&__NatkaPhoto,
-	&__KarelPhoto {
+	&__KarelPhoto,
+	&__AlesPhoto {
 		position: absolute;
 		cursor: pointer;
 		width: 90px;
@@ -55,13 +66,18 @@
 	.Chart {
 		width: 550px;
 		height: 400px;
+		margin-bottom: -60px;
+		&--active {
+			margin-bottom: -10px;
+		}
 		&__Big {
 			left: -100px;
 			width: 750px;
 			height: 392px;
 		}
 		&__NatkaPhoto,
-		&__KarelPhoto {
+		&__KarelPhoto,
+		&__AlesPhoto {
 			width: 72px;
 			height: 72px;
 		}
@@ -73,12 +89,20 @@
 			top: 280px;
 			left: 170px;
 		}
+		&__AlesPhoto {
+			top: 85px;
+			left: 140px;
+		}
 	}
 }
 @media only screen and (max-width: 600px) {
 	.Chart {
 		width: 400px;
 		height: 360px;
+		margin-bottom: -120px;
+		&--active {
+			margin-bottom: 0;
+		}
 		&__Off {
 			&--active {
 				right: 70px;
@@ -94,7 +118,8 @@
 			height: 280px;
 		}
 		&__NatkaPhoto,
-		&__KarelPhoto {
+		&__KarelPhoto,
+		&__AlesPhoto {
 			width: 62px;
 			height: 62px;
 		}
@@ -106,12 +131,16 @@
 			top: 185px;
 			left: 105px;
 		}
+		&__AlesPhoto {
+			top: 52px;
+			left: 78px;
+		}
 	}
 }
 @media only screen and (max-width: 400px) {
 	.Chart {
 		width: 360px;
-		height: 360px;
+		height: 340px;
 		&__Off {
 			&--active {
 				right: 35px;
@@ -127,7 +156,8 @@
 			height: 280px;
 		}
 		&__NatkaPhoto,
-		&__KarelPhoto {
+		&__KarelPhoto,
+		&__AlesPhoto {
 			width: 58px;
 			height: 58px;
 		}
@@ -138,6 +168,10 @@
 		&__KarelPhoto {
 			top: 185px;
 			left: 95px;
+		}
+		&__AlesPhoto {
+			top: 55px;
+			left: 75px;
 		}
 	}
 }

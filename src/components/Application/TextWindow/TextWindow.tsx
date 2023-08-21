@@ -10,7 +10,7 @@ export const TextWindow: React.FC<TextWindowProps> = ({ lang }) => {
 	const language = lang === "cs" ? TextWindowInfoCS : TextWindowInfoEN;
 
 	return (
-		<div className={"textWindow"}>
+		<div id={"textWindow"} className={"textWindow"}>
 			<div className={"textBlock textBlock--1"}>
 				<div className={"textBlock__head"}>{language.head}</div>
 				<br />
@@ -20,7 +20,9 @@ export const TextWindow: React.FC<TextWindowProps> = ({ lang }) => {
 				<br />
 				<div className={"textBlock__heading"}>{language.heading2}</div>
 				<div className={"textBlock__text"}>{language.text}</div>
+				<div className={"textBlock__text"}>{language.text6}</div>
 				<div className={"textBlock__text"}>{language.text1}</div>
+				<div className={"textBlock__text"}>{language.text5}</div>
 				<div className={"textBlock__text"}>{language.text2}</div>
 				<div className={"textBlock__text"}>{language.text3}</div>
 				<div className={"textBlock__text"}>{language.text4}</div>
