@@ -1,8 +1,8 @@
 export const WhoInfoCS = {
-	head: "O NÁS",
-	heading: "KDO JSME",
+	head: "O MĚ",
+	heading: "KDO JSEM",
 	location1:
-		"Jsme skupina odhadců zaměřená na oceňování nemovitých věcí, která působí zejména na území Jihočeského kraje. Spolupracujeme spolu již řadu let a právě na této spolupráci si zakládáme. Důvodem je odlišný pohled na problematiku každého z nás, který je způsobený individuálními profesními zkušenostmi. Ne vždy je zcela jednoznačné, jaká metoda a způsob je při ocenění vhodná použít, proto se držíme se přísloví „víc hlav víc ví“ a tyto případy konzultujeme a zhotovujeme společně.",
+		"Jmenuji se Ing. Aleš Vachuška. Zaměřuji se na oceňování nemovitých věcí. Působím zejména na území Jihočeského a Plzeňského kraje, případně dle domluvy kdekoliv na území České republiky.Zakládám si na profesionálním a individuálním přístupu. Sleduji trendy v oceňování nemovitých věcí a soustavně se vzdělávám tak, abych poskytl vždy nejlepší možné služby přesně na míru.",
 	heading2: "Jaké odhady provádíme",
 	text5: "Odhad ceny rodinného domu",
 	text6: "Odhad ceny rekreační chaty, chalupy",
@@ -16,10 +16,10 @@ export const WhoInfoCS = {
 };
 
 export const WhoInfoEN = {
-	head: "ABOUT US",
-	heading: "WHO ARE WE",
+	head: "ABOUT ME",
+	heading: "WHO AM I",
 	location1:
-		"We are a group of appraisers focused on the valuation of real estate, which operates mainly in the territory of the South Bohemian Region. We have been working together for many years and it is precisely on this cooperation that we base ourselves. The reason is that each of us has a different view of the issue, which is caused by individual professional experiences. It is not always completely clear which method and method is appropriate to use for valuation, therefore we stick to the saying „more heads know more“ and we consult and prepare these cases together.",
+		"My name is Ing. Aleš Vachuška. I focus on appreciating real estate. I operate mainly on the territory of the South And Plzen Region, or by arrangement anywhere on the territory of the Czech Republic.I base myself on a professional and individual approach. I follow trends in the valuation of real estate and have consistently educated myself to provide the best possible tailor-made service at all times.",
 	heading2: "WHAT WE APPRECIATE",
 	text5: "Estimate of the price of a family house",
 	text6: "Estimate of the price of a holiday cottage",

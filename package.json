@@ -15,9 +15,9 @@
         "react-scripts": "3.4.3"
     },
     "scripts": {
-        "webpack-prod": "webpack --config webpack.config.prod.js",
+        "webpack-prod": "NODE_OPTIONS=--openssl-legacy-provider webpack --config webpack.config.prod.js",
         "webpack-dev": "webpack --config webpack.config.dev.js",
-        "webpack-dev-w": "webpack --config webpack.config.dev.js --watch"
+        "webpack-dev-w": "NODE_OPTIONS=--openssl-legacy-provider webpack --config webpack.config.dev.js --watch"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -54,7 +54,7 @@
         "terser-webpack-plugin": "^4.1.0",
         "ts-loader": "^8.0.2",
         "typescript": "^3.7.5",
-        "webpack": "^4.44.1",
-        "webpack-cli": "^3.3.12"
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.10"
     }
 }

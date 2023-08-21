@@ -23,7 +23,7 @@ export const Application = () => {
 	return (
 		<>
 			<Menu lang={lang} changeLang={(event) => changeLang(event)} />
-			<div id={"textWindow"}>
+			<div>
 				<Chart />
 				<TextWindow lang={lang} />
 				<Howdo lang={lang} />

@@ -21,18 +21,13 @@ export const Menu: React.FC<MenuProps> = (props) => {
 			if (event === 0) {
 				scrollToPosition(0, offsetAnimation);
 			}
-			if (event === 1) {
-				const fifthPart = document.getElementById("photoGalleryBlock")!;
-				const topPosition = fifthPart.offsetTop;
-				scrollToPosition(topPosition, offsetAnimation);
-			}
 			if (event === 2) {
-				const prizeList = document.getElementById("textWindow")!;
+				const prizeList = document.getElementById("first")!;
 				const topPosition = prizeList.offsetTop;
 				scrollToPosition(topPosition, offsetAnimation);
 			}
 			if (event === 3) {
-				const gallery = document.getElementById("mapCont")!;
+				const gallery = document.getElementById("second")!;
 				const topPosition = gallery.offsetTop;
 				scrollToPosition(topPosition, offsetAnimation);
 			}
@@ -48,18 +43,13 @@ export const Menu: React.FC<MenuProps> = (props) => {
 			if (event === 0) {
 				scrollToPosition(0, offsetAnimation);
 			}
-			if (event === 1) {
-				const fifthPart = document.getElementById("photoGalleryBlock")!;
-				const topPosition = fifthPart.offsetTop;
-				scrollToPosition(topPosition, offsetAnimation);
-			}
 			if (event === 2) {
-				const prizeList = document.getElementById("textWindow")!;
+				const prizeList = document.getElementById("first")!;
 				const topPosition = prizeList.offsetTop;
 				scrollToPosition(topPosition, offsetAnimation);
 			}
 			if (event === 3) {
-				const gallery = document.getElementById("mapCont")!;
+				const gallery = document.getElementById("second")!;
 				const topPosition = gallery.offsetTop;
 				scrollToPosition(topPosition, offsetAnimation);
 			}
@@ -91,9 +81,7 @@ export const Menu: React.FC<MenuProps> = (props) => {
 	return (
 		<div className={"menu"}>
 			<div className={"menu__left"}>
-				<div className={"menu__logo"}>
-					{props.lang === "cs" ? "Odhady Jižní Čechy" : "South Bohemia Estimates"}
-				</div>
+				<img src={"/src/images/logo/vachuska_logo.svg"} alt={"vachuska_logo"} className={"menu__logo"} />
 				<div id={"menu__mobile"} className={"menu__mobile"} onClick={openMobileMenu} />
 				<div
 					className={`menu__lang ${props.lang === "cs" ? "menu__lang--en" : "menu__lang--cs"}`}
@@ -115,20 +103,12 @@ export const Menu: React.FC<MenuProps> = (props) => {
 						handleSlidePart(3);
 					}}
 				>
-					{props.lang === "cs" ? "O nás" : "About us"}
+					{props.lang === "cs" ? "O mě" : "About me"}
 				</div>
 				<div
 					className={"menu__element"}
 					onClick={() => {
 						handleSlidePart(4);
-					}}
-				>
-					{props.lang === "cs" ? "Služby" : "Services"}
-				</div>
-				<div
-					className={"menu__element"}
-					onClick={() => {
-						handleSlidePart(5);
 					}}
 				>
 					{props.lang === "cs" ? "Kontakt" : "Contact"}

@@ -10,7 +10,7 @@ $name = $json["name"];
 $email = $json["email"];
 $message = $json["message"];
 
-$emailTo = "info@apartmanykratka.cz";
+$emailTo = "odhadyvachuska@gmail.com";
 $headers =
     "From:" . $email . "\r\n" .
     "Reply-To:" . $email . "\r\n" .

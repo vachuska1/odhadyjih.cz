@@ -3,7 +3,7 @@ import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import { LatLngTuple } from "leaflet";
 import "./MapWindow.less";
 
-const defaultLatLng: LatLngTuple = [48.97638, 14.47353];
+const defaultLatLng: LatLngTuple = [49.324189372344264, 13.70267909039414];
 
 export const MapWindow = () => {
 	const initMarker = (ref) => {
@@ -20,7 +20,7 @@ export const MapWindow = () => {
 				/>
 				<Marker position={defaultLatLng} ref={initMarker}>
 					<Popup className={"popUp"} open={true}>
-						Krajinská 244/17, 370 01 České Budějovice
+						Mayerova 1067, 341 01 Horažďovice
 					</Popup>
 				</Marker>
 			</Map>

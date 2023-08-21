@@ -111,24 +111,19 @@ export const Footer: React.FC<FooterProps> = (props) => {
 			</div>
 			<div className="footer__cont">
 				<div className="footer__contArea">
-					<div className="footer__headName">{props.lang === "cs" ? "Provozovatel:" : "Operator:"}</div>
-					<div className="footer__text">Vachi 11, Bruhis 10 </div>
-					<div className="footer__text">IČO: 1234556</div>
-					<div className="footer__text">DIČ: CZ1234567</div>
 					<div className="footer__headName">
-						{props.lang === "cs" ? "Kontaktní osoba:" : "Contact person:"}
+						{props.lang === "cs" ? "Kancelář odhadce nemovitostí:" : "Real estate appraiser's office:"}
 					</div>
-					<div className="footer__text">Prof. Ing. Natalie Jurdova CsC.</div>
-					<div className="footer__text">+420 111 222 333</div>
-					<div className="footer__text">IČO: xy</div>
+					<div className="footer__text">Bc. Nina Doležalová</div>
+					<div className="footer__text">+420 774 189 395</div>
 					<div className="footer__headName">{props.lang === "cs" ? "Sociální sítě" : "Social sites"}</div>
 					<div className="footer__social">
-						<a href="https://www.instagram.com/odhadyjiznicechy/" target="_blank">
+						<a href="https://www.instagram.com/ocenovani_vachuska/?hl=cs" target="_blank">
 							<div className="footer__socialIcon footer__socialIcon--ig" />
 						</a>
 					</div>
 					<div className="footer__headName">{props.lang === "cs" ? "Najdete nás:" : "You can find us:"}</div>
-					<div className="footer__text">Krajinská 244/17, 370 01 České Budějovice</div>
+					<div className="footer__text">Mayerova 1067, 341 01 Horažďovice</div>
 				</div>
 				<div className="footer__contArea">
 					<div className="footer__headName footer__headName--padding">
@@ -202,7 +197,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
 			</div>
 			<div className="footer__sentence">
 				<div className="footer__sentence--logo" />
-				Vytvořil: jakswebem.cz
+				Vytvořil: Aleš Vachuška
 			</div>
 		</div>
 	);

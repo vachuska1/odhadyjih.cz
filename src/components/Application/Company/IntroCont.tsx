@@ -7,20 +7,6 @@ export const IntroCont = () => {
 		<div className="IntroCont">
 			<div className="IntroCont__Round">
 				<WhoAre
-					classname="IntroCont__Image IntroCont__ImageKarel"
-					desc="Ing. Karel Brůha"
-					desctwo="111 222 333"
-				/>
-			</div>
-			<div className="IntroCont__Round">
-				<WhoAre
-					classname="IntroCont__Image IntroCont__ImageNatka"
-					desc="Ing. Natálie Jurdová"
-					desctwo="727 838 131"
-				/>
-			</div>
-			<div className="IntroCont__Round">
-				<WhoAre
 					classname="IntroCont__Image IntroCont__ImageAles"
 					desc="Ing. Aleš Vachuška"
 					desctwo="774 104 020"
