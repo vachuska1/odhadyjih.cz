@@ -15,18 +15,7 @@ export const PhotogalleryTextContentInfoCS: Array<PhotogalleryTextContentInfoTyp
 			info5: "Apatrmány jsou zcela nekuřácké.",
 			info6: "Žádáme o dodržování nočního klidu od 22:00 do 6:00",
 		},
-		photogalleryInfo: [
-			"photo_1",
-			"photo_2",
-			"photo_3",
-			"photo_4",
-			"photo_5",
-			"photo_6",
-			"photo_7",
-			"photo_8",
-			"photo_9",
-			"photo_10",
-		],
+		photogalleryInfo: ["1", "1_1", "1_2", "9"],
 	},
 ];
 
@@ -45,17 +34,6 @@ export const PhotogalleryTextContentInfoEN: Array<PhotogalleryTextContentInfoTyp
 			info5: "Apartments are strictly nonsmoking. ",
 			info6: "We kindly ask to be considerate and keep the quiet hours from 10pm to 6am.",
 		},
-		photogalleryInfo: [
-			"photo_1",
-			"photo_2",
-			"photo_3",
-			"photo_4",
-			"photo_5",
-			"photo_6",
-			"photo_7",
-			"photo_8",
-			"photo_9",
-			"photo_10",
-		],
+		photogalleryInfo: ["1", "1_1", "1_2", "9"],
 	},
 ];

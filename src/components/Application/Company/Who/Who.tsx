@@ -10,7 +10,7 @@ export const Who: React.FC<WhoProps> = ({ lang }) => {
 	const language = lang === "cs" ? WhoInfoCS : WhoInfoEN;
 
 	return (
-		<div className={"textWindow"} id={"second"}>
+		<div id={"Who"} className={"textWindow"}>
 			<div className={"textBlock textBlock--1"}>
 				<div className={"textBlock__head"}>{language.head}</div>
 				<br />
