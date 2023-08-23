@@ -9,7 +9,7 @@ export const IntroCont = () => {
 				<WhoAre
 					classname="IntroCont__Image IntroCont__ImageAles"
 					desc="Ing. Aleš Vachuška"
-					desctwo="774 104 020"
+					desctwo="774 189 395"
 				/>
 			</div>
 		</div>

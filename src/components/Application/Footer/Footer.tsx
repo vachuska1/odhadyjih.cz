@@ -106,9 +106,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
 
 	return (
 		<div id="footer" className="footer">
-			<div className="footer__heading">
-				{props.lang === "cs" ? "Odhady Jižní Čechy" : "South bohemia estimates"}
-			</div>
+			<div className="footer__heading">{props.lang === "cs" ? "Odhady Vachuška" : "South bohemia estimates"}</div>
 			<div className="footer__cont">
 				<div className="footer__contArea">
 					<div className="footer__headName">

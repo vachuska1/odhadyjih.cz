@@ -103,7 +103,7 @@ export const Menu: React.FC<MenuProps> = (props) => {
 						handleSlidePart(3);
 					}}
 				>
-					{props.lang === "cs" ? "O mě" : "About me"}
+					{props.lang === "cs" ? "O mně" : "About me"}
 				</div>
 				<div
 					className={"menu__element"}
