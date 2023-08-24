@@ -2,12 +2,12 @@ export const HowdoInfoCS = {
 	head: "Služby",
 	heading: "Postup",
 	location1:
-		"Nejideálnějším postupem je vyplnění našeho formuláře. Díky tomuto formuláři si uděláme představu o oceňované nemovitosti a zároveň můžeme vypočítat i odměnu za zpracování. Stejně jako samotný odhad nemovitosti ovlivňuje mnoho faktorů i jeho výsledna cena závisi na vice aspektech, jako jsou dojezdová vzdálenost, náročnost zpracovaní nebo lhúta pro vypracování. Každá zakázka je specifická a proto se jeji cena stanoví individualně po vzajemné konzultaci.",
+		"Nejideálnějším postupem je vyplnění našeho formuláře. Díky tomuto formuláři si uděláme představu o oceňované nemovitosti a zároveň můžeme vypočítat i odměnu za zpracování. Stejně jako samotný odhad nemovitosti ovlivňuje mnoho faktorů i jeho výsledná cena závisí na více aspektech, jako jsou dojezdová vzdálenost, náročnost zpracování nebo lhůta pro vypracování. Každá zakázka je specifická a proto se její cena stanoví individuálně po vzájemné konzultaci.",
 	heading2: "Prosím vyplňte formulář",
 	location2:
-		"Při odhadu nemovitosti je velmi důležité nemovitost vidět na vlastní oči. Proto je dalším krokem dohodnutí terminu mistniho šetření, během kterého odhadce zjistí spoustu informaci, ktere mohou mit vliv na výslednou hodnotu nemovitosti. Na mistní šetření je vhodné si připravit dokumenty o dané nemovitosti, jako jsou například stavebni dokumentace, projektová dokumentace, nebo starší znalecké posudky či odhady nemovitosti.)",
+		"Při odhadu nemovitosti je velmi důležité nemovitost vidět na vlastní oči. Proto je dalším krokem dohodnutí termínu místního šetření, během kterého odhadce zjistí spoustu informaci, ktere mohou mít vliv na výslednou hodnotu nemovitosti. Na místní šetření je vhodné si připravit dokumenty o dané nemovitosti, jako jsou například stavebni dokumentace, projektová dokumentace, nebo starší znalecké posudky či odhady nemovitosti.",
 	location3:
-		"Po mistním šetření má odhadce veškeré potřebné informace a může začít pracovat na odhadu. Poté, co je odhad zpracován, je poslednim krokem domluvení se na předání tištené verze a faktury.",
+		"Po místním šetření má odhadce veškeré potřebné informace a může začít pracovat na odhadu. Poté, co je odhad zpracován, je posledním krokem domluvení se na předání tištené verze a faktury.",
 };
 
 export const HowdoInfoEN = {

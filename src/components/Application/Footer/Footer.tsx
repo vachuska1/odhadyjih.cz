@@ -113,6 +113,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
 					</div>
 					<div className="footer__text">Bc. Nina Doležalová</div>
 					<div className="footer__text">+420 774 189 395</div>
+					<div className="footer__text">odhadyvachuska@gmail.com</div>
 					<div className="footer__headName">{props.lang === "cs" ? "Sociální sítě" : "Social sites"}</div>
 					<div className="footer__social">
 						<a href="https://www.instagram.com/ocenovani_vachuska/?hl=cs" target="_blank">

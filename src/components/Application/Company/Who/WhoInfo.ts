@@ -2,7 +2,7 @@ export const WhoInfoCS = {
 	head: "O MNĚ",
 	heading: "KDO JSEM",
 	location1:
-		"Jmenuji se Ing. Aleš Vachuška. Zaměřuji se na oceňování nemovitých věcí. Působím zejména na území Jihočeského a Plzeňského kraje, případně dle domluvy kdekoliv na území České republiky.Zakládám si na profesionálním a individuálním přístupu. Sleduji trendy v oceňování nemovitých věcí a soustavně se vzdělávám tak, abych poskytl vždy nejlepší možné služby přesně na míru.",
+		"Jmenuji se Ing. Aleš Vachuška. Zaměřuji se na oceňování nemovitých věcí. Působím zejména na území Jihočeského a Plzeňského kraje, případně dle domluvy kdekoliv na území České republiky. Zakládám si na profesionálním a individuálním přístupu. Sleduji trendy v oceňování nemovitých věcí a soustavně se vzdělávám tak, abych poskytl vždy nejlepší možné služby přesně na míru.",
 	heading2: "Jaké odhady provádím",
 	text5: "Odhad ceny rodinného domu",
 	text6: "Odhad ceny rekreační chaty, chalupy",
