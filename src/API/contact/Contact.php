@@ -8,9 +8,13 @@ $json = json_decode(file_get_contents('php://input'), true);
 
 $name = $json["name"];
 $email = $json["email"];
-$message = $json["message"];
+$number = $json["number"];
+$address = $json["address"];
+$subject = $json["subject"];
+$purpose = $json["purpose"];
+$messages = $json["message"];
 
-$emailTo = "odhadyvachuska@gmail.com";
+$toAdmin = "info@odhadyjiznicechy.cz";
 $headers =
     "From:" . $email . "\r\n" .
     "Reply-To:" . $email . "\r\n" .
@@ -18,28 +22,28 @@ $headers =
     "MIME-Version: 1.0" . "\r\n" .
     "Content-Transfer-Encoding: 8bit" . "\r\n" .
     "Content-Type: text/html; charset=utf-8" . "\r\n";
-$subjectAdmin = '=?UTF-8?B?' . base64_encode('Potvrzení o požadavku na stránce ApartmanyKratka.cz') . '?=';
+$subjectAdmin = '=?UTF-8?B?' . base64_encode('Potvrzení o požadavku na stránce Odhadyjiznicechy.cz') . '?=';
 $message =
-    '<div style="
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            width: 100%; 
-            height: 80px; 
-            font-size: 28px;
-            letter-spacing: 3px;
-            color: #ffffff;
-            background-color: #3850ba">
-            ApartmanyKratka
+    '<div>
+            OdhadyJiznicechy
         </div>' .
     '</br>' .
-    '<p style="font-size: 16px; font-weight: bold; margin: 0 auto 20px; width: 100%; text-align: center;">Potvrzení o vyplnění formuláře na stránce ApartmanyKratka.cz</p></br>' .
+    '<p>Potvrzení o vyplnění formuláře na stránce OdhadyJizniCechy.cz</p></br>' .
     '</br>' .
-    '<p style="font-size: 13px;"><strong>jméno:</strong> ' . $name . '</p>' .
+    '<p style="font-size: 13px;"><strong>jmeno:</strong> ' . $name . '</p>' .
     '<p style="font-size: 13px;"><strong>email:</strong> ' . $email . '</p>' .
-    '<p style="font-size: 13px; max-width: 400px;"><strong>zpráva:</strong> ' . $message . '</p>';
+    '<p style="font-size: 13px;"><strong>telefonni cislo:</strong> ' . $number . '</p>' .
+    '<p style="font-size: 13px;"><strong>adresa:</strong> ' . $address . '</p>' .
+    '<p style="font-size: 13px;"><strong>predmet:</strong> ' . $subject . '</p>' .
+    '<p style="font-size: 13px;"><strong>ucel:</strong> ' . $purpose . '</p>' .
+    '<p style="font-size: 13px; max-width: 400px;"><strong>zpráva:</strong> ' . $messages . '</p>';
 
-if (mail($emailTo, $subjectAdmin, $message, $headers)) {
+// echo json_encode(1);
+
+//echo json_encode($name . ", " . $email . ", " . $number . ", " . $address . ", " . $subject . ", " . $purpose . ", " .$message . ", " )
+
+
+if (mail($toAdmin, $subjectAdmin, $message, $headers)) {
     echo json_encode(1);
 } else {
     echo json_encode(0);
