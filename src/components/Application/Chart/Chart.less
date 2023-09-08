@@ -1,10 +1,32 @@
 .Chart {
-	display: flex;
+	display: grid;
+	gap: 100px;
 	justify-content: center;
+	align-items: center;
 	width: 1000px;
 	margin: 100px auto 0;
 	position: relative;
+	grid-template:
+		" mobile photo email" auto
+		/ 100px auto 100px;
+	&__mobile {
+		justify-self: end;
+		grid-area: mobile;
+		width: 100px;
+		height: 100px;
+		background: url("../../../images/icons/phone.svg") no-repeat center/100px;
+		cursor: pointer;
+	}
+	&__email {
+		justify-self: start;
+		grid-area: email;
+		width: 100px;
+		height: 100px;
+		background: url("../../../images/icons/email.svg") no-repeat center/100px;
+		cursor: pointer;
+	}
 	&__image {
+		grid-area: photo;
 		max-width: 400px;
 	}
 	&__Off {
@@ -59,6 +81,9 @@
 	.Chart {
 		width: 550px;
 		height: 400px;
+		&__image {
+			max-width: 300px;
+		}
 		&__Big {
 			left: -100px;
 			width: 750px;
@@ -76,6 +101,24 @@
 		&__KarelPhoto {
 			top: 280px;
 			left: 170px;
+		}
+	}
+}
+@media only screen and (max-width: 800px) {
+	.Chart {
+		gap: 40px;
+		&__image {
+			max-width: 250px;
+		}
+		&__mobile {
+			width: 60px;
+			height: 60px;
+			background: url("../../../images/icons/phone.svg") no-repeat center/60px;
+		}
+		&__email {
+			width: 60px;
+			height: 60px;
+			background: url("../../../images/icons/email.svg") no-repeat center/60px;
 		}
 	}
 }
@@ -109,6 +152,24 @@
 		&__KarelPhoto {
 			top: 185px;
 			left: 105px;
+		}
+	}
+}
+@media only screen and (max-width: 500px) {
+	.Chart {
+		gap: 0;
+		&__image {
+			max-width: 200px;
+		}
+		&__mobile {
+			width: 40px;
+			height: 40px;
+			background: url("../../../images/icons/phone.svg") no-repeat center/40px;
+		}
+		&__email {
+			width: 40px;
+			height: 40px;
+			background: url("../../../images/icons/email.svg") no-repeat center/40px;
 		}
 	}
 }

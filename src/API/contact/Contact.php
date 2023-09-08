@@ -14,7 +14,7 @@ $subject = $json["subject"];
 $purpose = $json["purpose"];
 $messages = $json["message"];
 
-$toAdmin = "info@odhadyjiznicechy.cz";
+$toAdmin = "odhadyvachuska@gmail.com";
 $headers =
     "From:" . $email . "\r\n" .
     "Reply-To:" . $email . "\r\n" .
@@ -22,13 +22,13 @@ $headers =
     "MIME-Version: 1.0" . "\r\n" .
     "Content-Transfer-Encoding: 8bit" . "\r\n" .
     "Content-Type: text/html; charset=utf-8" . "\r\n";
-$subjectAdmin = '=?UTF-8?B?' . base64_encode('Potvrzení o požadavku na stránce Odhadyjiznicechy.cz') . '?=';
+$subjectAdmin = '=?UTF-8?B?' . base64_encode('Potvrzení o požadavku na stránce OdhadyVachuska.cz') . '?=';
 $message =
     '<div>
-            OdhadyJiznicechy
+            OdhadyVachuska
         </div>' .
     '</br>' .
-    '<p>Potvrzení o vyplnění formuláře na stránce OdhadyJizniCechy.cz</p></br>' .
+    '<p>Potvrzení o vyplnění formuláře na stránce OdhadyVachuska.cz</p></br>' .
     '</br>' .
     '<p style="font-size: 13px;"><strong>jmeno:</strong> ' . $name . '</p>' .
     '<p style="font-size: 13px;"><strong>email:</strong> ' . $email . '</p>' .
@@ -37,11 +37,6 @@ $message =
     '<p style="font-size: 13px;"><strong>predmet:</strong> ' . $subject . '</p>' .
     '<p style="font-size: 13px;"><strong>ucel:</strong> ' . $purpose . '</p>' .
     '<p style="font-size: 13px; max-width: 400px;"><strong>zpráva:</strong> ' . $messages . '</p>';
-
-// echo json_encode(1);
-
-//echo json_encode($name . ", " . $email . ", " . $number . ", " . $address . ", " . $subject . ", " . $purpose . ", " .$message . ", " )
-
 
 if (mail($toAdmin, $subjectAdmin, $message, $headers)) {
     echo json_encode(1);

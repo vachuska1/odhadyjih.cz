@@ -22,7 +22,7 @@ module.exports = {
                 loader: 'string-replace-loader',
                 options: {
                     search: './src/API/',
-                    replace: 'http://localhost:8000/own_projects/personal/www.apartmanykratka.cz/src/API/',
+                    replace: 'http://localhost:8000/own_projects/personal/__odhadyjih.cz/odhadyjih.cz/src/API/',
                     flags: 'g'
                 }
             },

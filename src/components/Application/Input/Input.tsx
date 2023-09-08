@@ -37,7 +37,6 @@ export const Input = (props: HowdoProps) => {
 	}, [validate]);
 
 	const validateForm = (event) => {
-		console.log(`${name}, ${email}, ${number}, ${address}, ${subject}, ${purpose}, ${message}`);
 		event.preventDefault();
 		let validation = true;
 		if (name === "") {
@@ -112,7 +111,6 @@ export const Input = (props: HowdoProps) => {
 		})
 			.then((response) => response.json())
 			.then((result) => {
-				console.log(result);
 				setLoading(false);
 				if (result === 1) {
 					setSuccessfulSend(true);
